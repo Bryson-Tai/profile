@@ -9,7 +9,7 @@ $primary-color-active: #005cbf;
 #svg-name {
     path {
         &:nth-child(1) {
-            stroke-dasharray: 10px;
+            stroke-dasharray: 0px;
             stroke-dashoffset: 50px;
         }
 
@@ -27,17 +27,5 @@ $primary-color-active: #005cbf;
 
         &:nth-child(6) {
         }
-    }
-
-    &:nth-child(7) {
-    }
-
-    &:nth-child(8) {
-    }
-
-    &:nth-child(9) {
-    }
-
-    &:nth-child(10) {
     }
 }
