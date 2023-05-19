@@ -1,0 +1,43 @@
+// Primary color
+$primary-color: #6583cf;
+$primary-color-light: #c8d7e1;
+$primary-color-dark: #343a40;
+$primary-color-hover: #0069d9;
+$primary-color-focus: #0062cc;
+$primary-color-active: #005cbf;
+
+#svg-name {
+    path {
+        &:nth-child(1) {
+            stroke-dasharray: 10px;
+            stroke-dashoffset: 50px;
+        }
+
+        &:nth-child(2) {
+        }
+
+        &:nth-child(3) {
+        }
+
+        &:nth-child(4) {
+        }
+
+        &:nth-child(5) {
+        }
+
+        &:nth-child(6) {
+        }
+    }
+
+    &:nth-child(7) {
+    }
+
+    &:nth-child(8) {
+    }
+
+    &:nth-child(9) {
+    }
+
+    &:nth-child(10) {
+    }
+}

@@ -17,7 +17,7 @@ func main(){
 	})
 
 	//? Load HTML pages from the defined folder to router
-	router.LoadHTMLGlob("web/*.html")
+	router.LoadHTMLGlob("page/*.html")
 
 	//? Specify the routing path
 	//? The func(ctx *gin.Context) is where if user route "/", what should Gin does
