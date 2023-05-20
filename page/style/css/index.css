@@ -68,7 +68,7 @@ nav ul li a {
   font-weight: 600;
 }
 nav ul li a:hover {
-  background-color: #f8ae38;
+  background-color: #EF9928;
   color: #452c63;
 }
 
@@ -137,7 +137,7 @@ nav ul li a:hover {
 }
 .about_sect .about_sect_content .about_sect_title i {
   font-size: 3em;
-  color: #f8ae38;
+  color: #EF9928;
   margin-right: 15px;
 }
 .about_sect .about_sect_content .about_sect_title h1 {
@@ -190,7 +190,7 @@ nav ul li a:hover {
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_title i {
   font-size: 3em;
-  color: #f8ae38;
+  color: #EF9928;
   margin-right: 15px;
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_title h1 {
@@ -216,12 +216,12 @@ nav ul li a:hover {
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment-title-wrap i {
   font-size: 1.9em;
-  color: #f8ae38;
+  color: #EF9928;
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment-title-wrap h2 {
   font-size: 1.8em;
   font-weight: 500;
-  color: #f8ae38;
+  color: #EF9928;
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment {
   display: flex;
@@ -236,7 +236,7 @@ nav ul li a:hover {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.543);
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment > h2 {
-  color: #f8ae38;
+  color: #EF9928;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -273,7 +273,7 @@ nav ul li a:hover {
   font-size: 1.2em;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #f8ae38;
+  color: #EF9928;
 }
 .knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .title-wrap h3 {
   color: #513375;
