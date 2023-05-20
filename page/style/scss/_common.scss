@@ -1,0 +1,50 @@
+// Primary color
+$dark-purple: #452c63;
+$lighter-dark-purple: #513375;
+$middle-purple: #a377d9;
+$light-purple: #d2abfd;
+$light-middle-purple:#e9dbf9;
+$lightest-purple: #eee5f9;
+$white: #fff;
+
+$test: #f8ae38;
+
+// Secondary color
+$darker-orange: #f8ae38;
+// $darker-wood: #fad44d;
+$orange: #fbce5c;
+$light-orange: #f8c583;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color:$dark-purple;
+    scroll-behavior: smooth;
+}
+
+.auto-align-center{
+    margin: 0 auto;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.height-100{
+    height: 100%;
+}
+
+flex-center-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

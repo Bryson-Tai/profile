@@ -1,0 +1,24 @@
+DevOps
+- Docker
+- Kubernetes
+- Terraform
+- Ansible
+- Bash
+- CI/CD
+- Jenkins
+
+Backend
+- PHP
+- Java
+- Go Lang
+
+Cloud
+- AWS
+- GCP
+- AliCloud
+
+Web
+- HTML
+- CSS
+- JS
+

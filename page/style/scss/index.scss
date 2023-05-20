@@ -1,0 +1,310 @@
+@import "./common";
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: $middle-purple;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+        width: 50%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+
+        li {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $lightest-purple;
+                font-size: 1.3em;
+                letter-spacing: 3px;
+                padding: 15px 20px;
+                border-radius: 5px;
+                transition: all 0.4s ease;
+                font-weight: 600;
+                &:hover {
+                    background-color: $darker-orange;
+                    color:$dark-purple;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+
+    section {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+    }
+}
+
+.intro_sect {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(69,44,99);
+background: linear-gradient(180deg, rgba(69,44,99,1) 0%, rgba(163,119,217,1) 50%, rgba(238,229,249,1) 100%);
+    .intro_sect_name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 600;
+            color: $light-middle-purple;
+        }
+
+        svg {
+            margin-left: 20px;
+        }
+    }
+
+    .intro_sect_job {
+        h2 {
+            font-size: 2.1em;
+            font-weight: 400;
+            color: $light-middle-purple;
+
+            span {
+                text-decoration: underline;
+                font-weight: 600;
+                color:$lighter-dark-purple;
+            }
+        }
+    }
+}
+
+.about_sect {
+    height: 100vh;
+    padding: 8% 0 4% 0;
+    background-color: $lightest-purple;
+
+    .about_sect_content {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 4%;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+
+        .about_sect_title {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                font-size: 3em;
+                color: $darker-orange;
+                margin-right: 15px;
+            }
+    
+            h1 {
+                font-size: 3em;
+                font-weight: 600;
+                color: $lighter-dark-purple;
+            }
+        }
+
+        .about_sect_content_left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                max-width: 80%;
+                min-width: 70%;
+                height: auto;
+            }
+        }
+
+        .about_sect_content_right {
+            width: 50%;
+            padding: 10% 5%;
+            p {
+                font-size: 1.2em;
+                font-weight: 400;
+                color: $lighter-dark-purple;
+                text-align: center;
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+.knowledge_sect {
+    padding: 8% 0 4% 0;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: $lightest-purple;
+
+    .knowledge_sect_content {
+        width: 90%;
+        height: fit-content;
+        margin: 0 auto;
+
+        .knowledge_sect_title {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                font-size: 3em;
+                color: $darker-orange;
+                margin-right: 15px;
+            }
+
+            h1 {
+                font-size: 3em;
+                font-weight: 600;
+                color: $lighter-dark-purple;
+            }
+        }
+
+        .knowledge_sect_abilities {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .segment-title-wrap{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                i{
+                    font-size: 1.9em;
+                    color: $darker-orange;
+                }
+
+                h2{
+                    font-size: 1.8em;
+                    font-weight: 500;
+                    color: $darker-orange;
+                }
+            }
+
+            .segment{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 45%;
+                height: 100%;
+                margin: 4% 1% 1% 1%;
+                background-color: $white;
+                border-radius: 10px;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.543);
+
+                & > h2{
+                    color: $darker-orange;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+
+            }
+
+            .devops{
+                padding: 4% 4%;
+
+                .devops-inner-wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                }
+
+                .devops-left,
+                .devops-right{
+                    width: 45%;
+                }
+            }
+
+            .backend,
+            .cloud-provider,
+            .web-development{
+                padding: 4% 6%;
+               //width: 30%;
+            }
+
+            .ability-wrap {
+                width: 100%;
+                height: fit-content;
+                margin-top: 50px;
+
+                .title-wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h2 {
+                        font-size: 1.2em;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        color: $darker-orange;
+                    }
+
+                    h3 {
+                        color: $lighter-dark-purple;
+                    }
+                }
+
+                .progress-box {
+                    width: 100%;
+                    height: 10px;
+                    border-radius: 5px;
+                    background-color: lightgray;
+                    position: relative;
+                    z-index: 1;
+
+                    .percentage {
+                        span {
+                            position: absolute;
+                            width: 100%;
+
+                            &::before {
+                                height: 10px;
+                                width: 100%;
+                                position: absolute;
+                                background-color: $dark-purple;
+                                border-radius: 5px;
+                                content: "";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
