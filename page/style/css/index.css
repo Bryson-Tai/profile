@@ -5,7 +5,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  color: #452c63;
+  color: #4a2e6c;
   scroll-behavior: smooth;
 }
 
@@ -30,271 +30,132 @@ flex-center-column {
   flex-direction: column;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #4a2e6c;
+  scroll-behavior: smooth;
+}
+
+.auto-align-center {
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes coloringRadiant {
+  0%, 100% {
+    bottom: 0px;
+  }
+  50% {
+    top: calc(100% - 20px);
+  }
+}
 body {
   width: 100%;
   height: 100%;
-  background-color: #a377d9;
   position: relative;
+  background-color: #eae9e9;
 }
 
-nav {
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 80%;
+  border-radius: 10px;
+}
+.content .content-relative {
+  position: relative;
   width: 100%;
-  height: 80px;
-  position: fixed;
-  z-index: 999;
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.content header {
+  width: 6%;
+  height: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  background: #4a2e6c;
+  border-radius: 0 10px 10px 0;
+}
+.content header nav {
+  height: 66%;
+}
+.content header nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-nav ul {
-  width: 50%;
-  height: 100%;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 0 0 10px 10px;
-}
-nav ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #eee5f9;
-  font-size: 1.3em;
-  letter-spacing: 3px;
-  padding: 15px 20px;
-  border-radius: 5px;
-  transition: all 0.4s ease;
-  font-weight: 600;
-}
-nav ul li a:hover {
-  background-color: #EF9928;
-  color: #452c63;
-}
-
-.container {
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
-  height: 100vh;
-}
-.container section {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
-
-.intro_sect {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: rgb(69, 44, 99);
-  background: linear-gradient(180deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(238, 229, 249) 100%);
-}
-.intro_sect .intro_sect_name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.intro_sect .intro_sect_name h1 {
-  font-size: 3em;
-  font-weight: 600;
-  color: #e9dbf9;
-}
-.intro_sect .intro_sect_name svg {
-  margin-left: 20px;
-}
-.intro_sect .intro_sect_job h2 {
-  font-size: 2.1em;
-  font-weight: 400;
-  color: #e9dbf9;
-}
-.intro_sect .intro_sect_job h2 span {
-  text-decoration: underline;
-  font-weight: 600;
-  color: #513375;
-}
-
-.about_sect {
-  height: 100vh;
-  padding: 8% 0 4% 0;
-  background-color: #eee5f9;
-}
-.about_sect .about_sect_content {
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 2% 4%;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-}
-.about_sect .about_sect_content .about_sect_title {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.about_sect .about_sect_content .about_sect_title i {
-  font-size: 3em;
-  color: #EF9928;
-  margin-right: 15px;
-}
-.about_sect .about_sect_content .about_sect_title h1 {
-  font-size: 3em;
-  font-weight: 600;
-  color: #513375;
-}
-.about_sect .about_sect_content .about_sect_content_left {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.about_sect .about_sect_content .about_sect_content_left img {
-  max-width: 80%;
-  min-width: 70%;
-  height: auto;
-}
-.about_sect .about_sect_content .about_sect_content_right {
-  width: 50%;
-  padding: 10% 5%;
-}
-.about_sect .about_sect_content .about_sect_content_right p {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #513375;
-  text-align: center;
-  line-height: 2em;
-}
-
-.knowledge_sect {
-  padding: 8% 0 4% 0;
-  min-height: 100vh;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #eee5f9;
-}
-.knowledge_sect .knowledge_sect_content {
-  width: 90%;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0 auto;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_title {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_title i {
-  font-size: 3em;
-  color: #EF9928;
-  margin-right: 15px;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_title h1 {
-  font-size: 3em;
-  font-weight: 600;
-  color: #513375;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment-title-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment-title-wrap i {
-  font-size: 1.9em;
-  color: #EF9928;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment-title-wrap h2 {
-  font-size: 1.8em;
-  font-weight: 500;
-  color: #EF9928;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 45%;
-  height: 100%;
-  margin: 4% 1% 1% 1%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.543);
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .segment > h2 {
-  color: #EF9928;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .devops {
-  padding: 4% 4%;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .devops .devops-inner-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .devops .devops-left,
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .devops .devops-right {
-  width: 45%;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .backend,
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .cloud-provider,
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .web-development {
-  padding: 4% 6%;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-top: 50px;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .title-wrap h2 {
-  font-size: 1.2em;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #EF9928;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .title-wrap h3 {
-  color: #513375;
-}
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .progress-box {
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  background-color: lightgray;
+.content header nav ul li {
   position: relative;
-  z-index: 1;
 }
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .progress-box .percentage span {
-  position: absolute;
-  width: 100%;
+.content header nav ul li a {
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1em;
 }
-.knowledge_sect .knowledge_sect_content .knowledge_sect_abilities .ability-wrap .progress-box .percentage span::before {
-  height: 10px;
-  width: 100%;
+.content header nav ul li a ion-icon {
+  font-size: 1.4em;
+  color: #fff;
+}
+.content header nav ul li:nth-child(2), .content header nav ul li:nth-child(4) {
+  height: 25%;
+}
+.content header nav ul li .connector {
+  position: relative;
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #eae9e9;
+  transition: all 0.3s ease-in-out;
+}
+.content header nav ul li .connector .inner-ball {
   position: absolute;
-  background-color: #452c63;
-  border-radius: 5px;
-  content: "";
+  top: 0;
+  animation: coloringRadiant 3s 1s infinite;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #f2a642;
+}
+.content .container {
+  width: 62%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8666666667);
+}
+.content .my-profile {
+  width: 32%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8666666667);
 }/*# sourceMappingURL=index.css.map */

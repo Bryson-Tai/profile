@@ -5,7 +5,7 @@
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  color: #452c63;
+  color: #4a2e6c;
   scroll-behavior: smooth;
 }
 
@@ -28,62 +28,4 @@ flex-center-column {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #a377d9;
-  position: relative;
-}
-
-.container {
-  margin: 0 auto;
-  width: 70%;
-  height: 50vh;
-}
-
-.abilities {
-  padding-top: 10em;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: column;
-}
-.abilities .ability-wrap {
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.abilities .ability-wrap .title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.abilities .ability-wrap .title-wrap h2 {
-  font-size: 20px;
-}
-.abilities .ability-wrap .title-wrap h3 {
-  color: #513375;
-}
-.abilities .ability-wrap .progress-box {
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  background-color: lightgray;
-  position: relative;
-}
-.abilities .ability-wrap .progress-box .percentage span {
-  position: absolute;
-  width: 100%;
-}
-.abilities .ability-wrap .progress-box .percentage span::before {
-  height: 10px;
-  width: 100%;
-  position: absolute;
-  background-color: #452c63;
-  border-radius: 5px;
-  content: "";
 }/*# sourceMappingURL=test.css.map */
