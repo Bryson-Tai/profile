@@ -26,7 +26,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 8px;
+        padding: 0 6px;
         background: $dark-purple;
         border-radius: 0 5px 5px 0;
 
@@ -44,20 +44,23 @@
                     position: relative;
                     a {
                         color: $white;
-                        letter-spacing: 2px;
+                        letter-spacing: 1px;
                         font-size: 0.9em;
-                        font-weight: 600;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         text-transform: uppercase;
-                        transition: all 0.3s ease-in-out;
-
+                        
                         ion-icon {
-                            font-size: 1.4em;
+                            font-size: 2em;
                             color: $white;
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                color: $orange;
+                            }
                         }
 
-                        &:hover {
-                            color: $orange;
-                        }
                     }
 
                     &:nth-child(2),
@@ -76,8 +79,8 @@
                         flex-direction: column;
 
                         .balls {
-                            width: 13px;
-                            height: 13px;
+                            width: 10px;
+                            height: 10px;
                             border-radius: 50%;
                             background-color: $darker-orange;
                             transition: all 1s ease-in-out 0.5s;
@@ -224,19 +227,6 @@ background: linear-gradient(90deg, rgba(163,107,229,1) 0%, rgba(240,232,250,1) 1
             border-radius: 5px;
             z-index: -100;
         }
-
-        // .second-layer-bg {
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     left: -5%;
-        //     top: -3%;
-        //     transform: rotate(-4deg);
-        //     background: transparent;
-        //     border: #ff9e03d0 2px solid;
-        //     border-radius: 20px;
-        //     z-index: -200;
-        // }
 
         .profile-wrap {
             position: relative;

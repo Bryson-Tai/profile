@@ -37,8 +37,8 @@
                     <ul>
                         <li>
                             <a href="#" id="about-tab">
-                                <!-- <ion-icon name="person"></ion-icon> -->
-                                About
+                                <ion-icon name="person"></ion-icon>
+                                <!-- About -->
                             </a>
                         </li>
                         <li>
@@ -50,8 +50,8 @@
                         </li>
                         <li>
                             <a href="#" id="project-tab">
-                                <!-- <ion-icon name="briefcase"></ion-icon> -->
-                                Project
+                                <ion-icon name="briefcase"></ion-icon>
+                                <!-- Project -->
                             </a>
                         </li>
                         <li>
@@ -63,8 +63,8 @@
                         </li>
                         <li>
                             <a href="#" id="contact-tab">
-                                <!-- <ion-icon name="mail"></ion-icon> -->
-                                Contact
+                                <ion-icon name="mail"></ion-icon>
+                                <!-- Contact -->
                             </a>
                         </li>
                     </ul>
@@ -370,26 +370,34 @@
 
             <div class="my-profile">
                 <div class="first-layer-bg"></div>
-                <!-- <div class="second-layer-bg"></div> -->
                 <!-- Put it last section -->
                 <div class="profile-wrap">
                     <div class="profile-img">
                         <img src="img/profile.svg" alt="Profile Img">
                     </div>
                 </div>
+                <!-- Github Link -->
+                <!-- LinkedIn Link -->
+                <!-- Facebook Link -->
             </div>
 
+            <!-- <footer>
+                <p>Bryson Tai @ Copyright © All Right Reserved · <span id="curr-year"></span></p>
+            </footer> -->
         </div>
-        <footer>
-            <!-- Github Link -->
-            <!-- LinkedIn Link -->
-        </footer>
     </div>
 
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("curr-year").innerHTML = new Date().getFullYear();    
+        });
+
+    </script>
 </body>
 
 </html>

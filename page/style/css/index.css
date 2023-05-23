@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  outline: none;
   font-family: "Poppins", sans-serif;
   color: #1f1f1f;
   scroll-behavior: smooth;
@@ -44,6 +45,7 @@ flex-center-column {
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  outline: none;
   font-family: "Poppins", sans-serif;
   color: #1f1f1f;
   scroll-behavior: smooth;
@@ -105,7 +107,7 @@ flex-center-column {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8px;
+  padding: 0 6px;
   background: #4a2e6c;
   border-radius: 0 5px 5px 0;
 }
@@ -124,17 +126,19 @@ flex-center-column {
 }
 .content header nav ul li a {
   color: #fff;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 0.9em;
-  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
 }
 .content header nav ul li a ion-icon {
-  font-size: 1.4em;
+  font-size: 2em;
   color: #fff;
+  transition: all 0.3s ease-in-out;
 }
-.content header nav ul li a:hover {
+.content header nav ul li a ion-icon:hover {
   color: #FA8128;
 }
 .content header nav ul li:nth-child(2), .content header nav ul li:nth-child(4) {
@@ -151,8 +155,8 @@ flex-center-column {
   flex-direction: column;
 }
 .content header nav ul li .connector .balls {
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #ED7014;
   transition: all 1s ease-in-out 0.5s;
