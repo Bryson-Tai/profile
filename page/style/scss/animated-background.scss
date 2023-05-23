@@ -27,6 +27,7 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
     display: block;
     width: var(--bubble-radius);
     height: var(--bubble-radius);
+    transform: rotate(45deg) skew(10deg, 10deg);
     border-radius: 10%;
     animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
 
@@ -37,8 +38,8 @@ $sway-type: "sway-left-to-right", "sway-right-to-left";
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgb(2,0,36);
-background: linear-gradient(133deg, rgba(2,0,36,0.1978132317380077) 0%, rgba(9,9,121,0.17540426815257348) 40%, rgba(0,212,255,0.24823339980523462) 100%);
+        background: rgb(237,112,20);
+        background: linear-gradient(120deg, rgba(237,112,20,0.6039756967240021) 0%, rgba(250,129,40,0.6011745762758228) 50%, rgba(253,161,114,0.6459925034466911) 100%);
         border-radius: inherit;
         animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate
             infinite;

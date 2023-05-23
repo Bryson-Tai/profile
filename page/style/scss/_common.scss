@@ -6,14 +6,15 @@ $light-purple: #d2abfd;
 $light-middle-purple:#e9dbf9;
 $lightest-purple: #eee5f9;
 $white: #fff;
+$black: #1f1f1f;
 
 $test: #EF9928;
 
 // Secondary color
-$darker-orange: #EF9928;
+$darker-orange: #ED7014;
 // $darker-wood: #fad44d;
-$orange: #f2a642;
-$light-orange: #f8c583;
+$orange: #FA8128;
+$light-orange: #fda172;
 
 *{
     margin: 0;
@@ -22,8 +23,16 @@ $light-orange: #f8c583;
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    color:$dark-purple;
+    color:$black;
     scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgb(69,44,99);
+background: linear-gradient(162deg, rgba(69,44,99,1) 0%, rgba(163,119,217,1) 50%, rgba(205,172,246,1) 100%);
 }
 
 .auto-align-center{

@@ -5,8 +5,16 @@
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  color: #4a2e6c;
+  color: #1f1f1f;
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgb(69, 44, 99);
+  background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
 .auto-align-center {
@@ -37,8 +45,16 @@ flex-center-column {
   list-style: none;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  color: #4a2e6c;
+  color: #1f1f1f;
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgb(69, 44, 99);
+  background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
 .auto-align-center {
@@ -62,29 +78,15 @@ flex-center-column {
   flex-direction: column;
 }
 
-@keyframes coloringRadiant {
-  0%, 100% {
-    bottom: 0px;
-  }
-  50% {
-    top: calc(100% - 45px);
-  }
-}
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #eae9e9;
-}
-
+@keyframes buttonColorFade {}
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: 80%;
   height: 80%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .content .content-relative {
   position: relative;
@@ -103,9 +105,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 6px;
+  padding: 0 8px;
   background: #4a2e6c;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 5px 5px 0;
 }
 .content header nav {
   height: 66%;
@@ -122,13 +124,18 @@ body {
 }
 .content header nav ul li a {
   color: #fff;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-size: 0.9em;
+  font-weight: 600;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 .content header nav ul li a ion-icon {
   font-size: 1.4em;
   color: #fff;
+}
+.content header nav ul li a:hover {
+  color: #FA8128;
 }
 .content header nav ul li:nth-child(2), .content header nav ul li:nth-child(4) {
   height: 25%;
@@ -137,27 +144,132 @@ body {
   position: relative;
   width: 6px;
   height: 100%;
-  border-radius: 10px;
-  background-color: #eae9e9;
-  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
-.content header nav ul li .connector .inner-ball {
-  position: absolute;
-  top: 5px;
-  animation: coloringRadiant 3s 1s infinite;
-  width: 100%;
-  height: 30px;
-  border-radius: 10px;
-  background: rgb(255, 190, 0);
-  background: linear-gradient(335deg, rgba(255, 190, 0, 0.9317067892) 0%, rgba(251, 30, 84, 0.912098946) 100%);
+.content header nav ul li .connector .balls {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ED7014;
+  transition: all 1s ease-in-out 0.5s;
+}
+.content header nav ul li .connector #balls-1 {
+  background-color: rgba(237, 110, 20, 0.8784313725);
+}
+.content header nav ul li .connector #balls-2 {
+  background-color: rgba(237, 110, 20, 0.8274509804);
+}
+.content header nav ul li .connector #balls-3 {
+  background-color: rgba(237, 110, 20, 0.7019607843);
+}
+.content header nav ul li .connector #balls-4 {
+  background-color: rgba(237, 110, 20, 0.7019607843);
+}
+.content header nav ul li .connector #balls-5 {
+  background-color: rgba(237, 110, 20, 0.8274509804);
+}
+.content header nav ul li .connector #balls-6 {
+  background-color: rgba(237, 110, 20, 0.8784313725);
 }
 .content .container {
   width: 62%;
   height: 100%;
   background: rgba(255, 255, 255, 0.8666666667);
+  padding: 2% 3% 1% 5%;
+}
+.content .container .intro_sect .intro_sect_about .intro_sect_about_title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4a2e6c;
+  position: relative;
+  width: 100%;
+}
+.content .container .intro_sect .intro_sect_about .intro_sect_about_title::before {
+  position: absolute;
+  content: "";
+  width: 5%;
+  height: 100%;
+  border-radius: 50%;
+  left: -1.5%;
+  top: -12%;
+  background: rgb(136, 79, 207);
+  background: linear-gradient(129deg, rgb(136, 79, 207) 0%, rgba(136, 79, 207, 0.4611185539) 46%);
+}
+.content .container .intro_sect .intro_sect_about .intro_sect_about_title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgb(163, 107, 229);
+  background: linear-gradient(90deg, rgb(163, 107, 229) 0%, rgb(240, 232, 250) 100%);
+}
+.content .container .intro_sect .intro_sect_about .intro_sect_about_title h1 {
+  margin-bottom: 5px;
+  font-size: 1.3em;
+}
+.content .container .intro_sect .intro_sect_about .intro_sect_about_title h1 span {
+  color: #513375;
+}
+.content .container .intro_sect .intro_sect_about p {
+  font-size: 1.1em;
+}
+.content .container .intro_sect .intro_sect_about p span {
+  color: #ED7014;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+.content .container .intro_sect .intro_sect_about .biometric-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 30px;
+}
+.content .container .intro_sect .intro_sect_about .biometric-wrap h2 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #4a2e6c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.content .container .intro_sect .intro_sect_about .biometric-wrap h2 .dot-wrap {
+  letter-spacing: 5px;
+  font-weight: 800;
+  color: #4a2e6c;
+}
+.content .container .intro_sect .intro_sect_about .biometric-wrap h2 .data-wrap {
+  text-transform: capitalize;
+  font-size: 1.1em;
 }
 .content .my-profile {
   width: 32%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8666666667);
+  background: #ffffff;
+  transform: scale(110%);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+}
+.content .my-profile .first-layer-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -3%;
+  top: -2%;
+  background: rgba(74, 46, 108, 0.4666666667);
+  border-radius: 5px;
+  z-index: -100;
+}
+.content .my-profile .profile-wrap {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #fefefe;
 }/*# sourceMappingURL=index.css.map */

@@ -1,11 +1,6 @@
 @import "./common";
 
-@keyframes coloringRadiant {
-    0%,100% {
-        bottom: 0px;
-    }
+@keyframes buttonColorFade {
 
-    50% {
-        top: calc(100% - 45px);  
-    }
+    
 }
