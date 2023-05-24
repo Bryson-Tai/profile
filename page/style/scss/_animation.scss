@@ -1,6 +1,15 @@
 @import "./common";
 
-@keyframes buttonColorFade {
+@keyframes navColorFade {
+    0% {
+        background-position: top;
+    }
 
+    100% {
+        background-position: bottom;
+    }
+    // 100% {
+    //     background-position: 0% 100%;
+    // }
     
 }

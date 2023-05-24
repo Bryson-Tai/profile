@@ -50,7 +50,7 @@
                         flex-direction: column;
                         align-items: center;
                         text-transform: uppercase;
-                        
+
                         ion-icon {
                             font-size: 2em;
                             color: $white;
@@ -60,7 +60,6 @@
                                 color: $orange;
                             }
                         }
-
                     }
 
                     &:nth-child(2),
@@ -70,45 +69,33 @@
 
                     .connector {
                         position: relative;
-                        width: 6px;
+                        width: 2px;
                         height: 100%;
-                        border-radius: 5px;
+                        // border-radius: 5px;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         flex-direction: column;
+                    }
 
-                        .balls {
-                            width: 10px;
-                            height: 10px;
-                            border-radius: 50%;
-                            background-color: $darker-orange;
-                            transition: all 1s ease-in-out 0.5s;
-                        }
+                    .connector-1 {
+                        background: rgb(74, 46, 108);
+                        background: linear-gradient(
+                            0deg,
+                            rgba(74, 46, 108, 1) 0%,
+                            rgba(237, 112, 20, 1) 70%,
+                            rgba(255, 255, 255, 1) 100%
+                        );
+                    }
 
-                        #balls-1 {
-                            background-color: #ed6e14e0;
-                        }
-
-                        #balls-2 {
-                            background-color: #ed6e14d3;
-                        }
-
-                        #balls-3 {
-                            background-color: #ed6e14b3;
-                        }
-
-                        #balls-4 {
-                            background-color: #ed6e14b3;
-                        }
-
-                        #balls-5 {
-                            background-color: #ed6e14d3;
-                        }
-
-                        #balls-6 {
-                            background-color: #ed6e14e0;
-                        }
+                    .connector-2 {
+                        background: rgb(74, 46, 108);
+                        background: linear-gradient(
+                            180deg,
+                            rgba(74, 46, 108, 1) 0%,
+                            rgba(237, 112, 20, 1) 70%,
+                            rgba(255, 255, 255, 1) 100%
+                        );
                     }
                 }
             }
@@ -119,90 +106,190 @@
         width: 62%;
         height: 100%;
         background: #ffffffdd;
-        padding: 2% 3% 1% 5%;
+        padding: 2% 3% 1% 4%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #d9d9d9;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background-color: #a6a6a6;
+        }
+
+        .section_title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: $dark-purple;
+            position: relative;
+            width: 100%;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 5%;
+                height: 100%;
+                border-radius: 50%;
+                left: -1.5%;
+                top: -12%;
+                background: rgb(136, 79, 207);
+                background: linear-gradient(
+                    129deg,
+                    rgba(136, 79, 207, 1) 0%,
+                    rgba(136, 79, 207, 0.4611185538668593) 46%
+                );
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                left: -5%;
+                background: rgb(252, 252, 252);
+                background: linear-gradient(
+                    270deg,
+                    rgba(252, 252, 252, 0.6011745762758228) 0%,
+                    rgba(139, 139, 139, 0.7748440440629376) 100%
+                );
+            }
+
+            h1 {
+                margin-bottom: 5px;
+                font-size: 1.3em;
+
+                span {
+                    color: $lighter-dark-purple;
+                }
+            }
+        }
 
         .intro_sect {
             .intro_sect_about {
-                .intro_sect_about_title {
-                    font-size: 1.2em;
-                    font-weight: 600;
-                    margin-bottom: 20px;
-                    color: $dark-purple;
-                    position: relative;
-                    width: 100%;
-
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        width: 5%;
-                        height: 100%;
-                        border-radius: 50%;
-                        left: -1.5%;
-                        top: -12%;
-                        background: rgb(136, 79, 207);
-                        background: linear-gradient(
-                            129deg,
-                            rgba(136, 79, 207, 1) 0%,
-                            rgba(136, 79, 207, 0.4611185538668593) 46%
-                        );
-                    }
-
-                    &::after {
-                        position: absolute;
-                        content: "";
-                        width: 100%;
-                        height: 1px;
-                        background: rgb(163,107,229);
-background: linear-gradient(90deg, rgba(163,107,229,1) 0%, rgba(240,232,250,1) 100%);
-                    }
-
-                    h1 {
-                        margin-bottom: 5px;
-                        font-size: 1.3em;
-
-                        span {
-                            color: $lighter-dark-purple;
-                        }
-                    }
-                }
-
                 p {
-                    font-size: 1.1em;
-
+                    margin-top: 20px;
                     span {
                         color: $darker-orange;
                         font-weight: 500;
-                        font-size: 1.3em;
-
+                        font-size: 1.2em;
                     }
                 }
 
-                .biometric-wrap{
+                .biometric-wrap {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     width: 90%;
                     margin-top: 30px;
 
-                    h2{
+                    h2 {
                         font-size: 1em;
                         font-weight: 600;
                         color: $dark-purple;
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
-                        .dot-wrap{
+                        .dot-wrap {
                             letter-spacing: 5px;
                             font-weight: 800;
                             color: $dark-purple;
                         }
 
-                        .data-wrap{
+                        .data-wrap {
                             text-transform: capitalize;
-                            font-size: 1.1em;
                         }
                     }
                 }
+            }
+        }
+
+        .services-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 100%;
+                left: 50%;
+                position: absolute;
+                background: rgb(220, 219, 219);
+                background: linear-gradient(0deg, rgba(252, 252, 252, 0.9) 0%, rgba(142, 142, 142, 0.9) 60%);
+            }
+
+            .service {
+                width: 50%;
+                padding: 5% 0 4% 0;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 90%;
+                    height: 1px;
+                    position: absolute;
+                    bottom: 0;
+                    background: rgb(252, 252, 252);
+                    background: linear-gradient(
+                        270deg,
+                        rgba(252, 252, 252, 0.2) 0%,
+                        rgba(142, 142, 142, 0.6) 50%,
+                        rgba(252, 252, 252, 0.2) 100%
+                    );
+                }
+
+                ion-icon {
+                    font-size: 2.5em;
+                    color: $orange;
+                    margin-bottom: 10px;
+                    padding: 2.5%;
+                    border-radius: 50%;
+                    background: rgb(237, 112, 20);
+                    background: linear-gradient(
+                        166deg,
+                        rgba(237, 112, 20, 0.3014546883206407) 0%,
+                        rgba(255, 255, 255, 0.20061435218618695) 100%
+                    );
+                }
+
+                h2 {
+                    font-size: 1em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .service-content {
+                    margin-top: 5px;
+                    p {
+                        font-size: 0.9em;
+                        // color: #605f5f;
+                    }
+                }
+
+                &:nth-child(2),
+                &:nth-child(4) {
+                    padding-left: 4%;
+                }
+            }
+
+            #web-development {
+            }
+
+            #web-hosting {
+            }
+
+            #devops {
+            }
+
+            #uni-coursework {
             }
         }
     }

@@ -18,6 +18,10 @@ body {
   background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
+.margin-top-3-6 {
+  margin-top: 3.6em;
+}
+
 .auto-align-center {
   margin: 0 auto;
 }
@@ -28,11 +32,7 @@ body {
   justify-content: space-around;
 }
 
-.height-100 {
-  height: 100%;
-}
-
-flex-center-column {
+.flex-center-column {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,10 @@ body {
   background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
+.margin-top-3-6 {
+  margin-top: 3.6em;
+}
+
 .auto-align-center {
   margin: 0 auto;
 }
@@ -69,18 +73,21 @@ body {
   justify-content: space-around;
 }
 
-.height-100 {
-  height: 100%;
-}
-
-flex-center-column {
+.flex-center-column {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-@keyframes buttonColorFade {}
+@keyframes navColorFade {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
 .content {
   position: absolute;
   top: 50%;
@@ -108,7 +115,7 @@ flex-center-column {
   align-items: center;
   justify-content: center;
   padding: 0 6px;
-  background: #4a2e6c;
+  background: #ED7014;
   border-radius: 0 5px 5px 0;
 }
 .content header nav {
@@ -146,54 +153,46 @@ flex-center-column {
 }
 .content header nav ul li .connector {
   position: relative;
-  width: 6px;
+  width: 2px;
   height: 100%;
-  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
-.content header nav ul li .connector .balls {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ED7014;
-  transition: all 1s ease-in-out 0.5s;
+.content header nav ul li .connector-1 {
+  background: rgb(74, 46, 108);
+  background: linear-gradient(0deg, rgb(74, 46, 108) 0%, rgb(237, 112, 20) 70%, rgb(255, 255, 255) 100%);
 }
-.content header nav ul li .connector #balls-1 {
-  background-color: rgba(237, 110, 20, 0.8784313725);
-}
-.content header nav ul li .connector #balls-2 {
-  background-color: rgba(237, 110, 20, 0.8274509804);
-}
-.content header nav ul li .connector #balls-3 {
-  background-color: rgba(237, 110, 20, 0.7019607843);
-}
-.content header nav ul li .connector #balls-4 {
-  background-color: rgba(237, 110, 20, 0.7019607843);
-}
-.content header nav ul li .connector #balls-5 {
-  background-color: rgba(237, 110, 20, 0.8274509804);
-}
-.content header nav ul li .connector #balls-6 {
-  background-color: rgba(237, 110, 20, 0.8784313725);
+.content header nav ul li .connector-2 {
+  background: rgb(74, 46, 108);
+  background: linear-gradient(180deg, rgb(74, 46, 108) 0%, rgb(237, 112, 20) 70%, rgb(255, 255, 255) 100%);
 }
 .content .container {
   width: 62%;
   height: 100%;
   background: rgba(255, 255, 255, 0.8666666667);
-  padding: 2% 3% 1% 5%;
+  padding: 2% 3% 1% 4%;
+  overflow-y: scroll;
 }
-.content .container .intro_sect .intro_sect_about .intro_sect_about_title {
+.content .container::-webkit-scrollbar {
+  width: 6px;
+}
+.content .container::-webkit-scrollbar-track {
+  background-color: #d9d9d9;
+}
+.content .container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #a6a6a6;
+}
+.content .container .section_title {
   font-size: 1.2em;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: #4a2e6c;
+  color: #ED7014;
   position: relative;
   width: 100%;
 }
-.content .container .intro_sect .intro_sect_about .intro_sect_about_title::before {
+.content .container .section_title::before {
   position: absolute;
   content: "";
   width: 5%;
@@ -204,28 +203,29 @@ flex-center-column {
   background: rgb(136, 79, 207);
   background: linear-gradient(129deg, rgb(136, 79, 207) 0%, rgba(136, 79, 207, 0.4611185539) 46%);
 }
-.content .container .intro_sect .intro_sect_about .intro_sect_about_title::after {
+.content .container .section_title::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 1px;
-  background: rgb(163, 107, 229);
-  background: linear-gradient(90deg, rgb(163, 107, 229) 0%, rgb(240, 232, 250) 100%);
+  left: -5%;
+  background: rgb(252, 252, 252);
+  background: linear-gradient(270deg, rgba(252, 252, 252, 0.6011745763) 0%, rgba(139, 139, 139, 0.7748440441) 100%);
 }
-.content .container .intro_sect .intro_sect_about .intro_sect_about_title h1 {
+.content .container .section_title h1 {
   margin-bottom: 5px;
   font-size: 1.3em;
 }
-.content .container .intro_sect .intro_sect_about .intro_sect_about_title h1 span {
-  color: #513375;
+.content .container .section_title h1 span {
+  color: #f27a25;
 }
 .content .container .intro_sect .intro_sect_about p {
-  font-size: 1.1em;
+  margin-top: 20px;
 }
 .content .container .intro_sect .intro_sect_about p span {
   color: #ED7014;
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap {
   display: flex;
@@ -237,18 +237,71 @@ flex-center-column {
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 {
   font-size: 1em;
   font-weight: 600;
-  color: #4a2e6c;
+  color: #ED7014;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 .dot-wrap {
   letter-spacing: 5px;
   font-weight: 800;
-  color: #4a2e6c;
+  color: #ED7014;
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 .data-wrap {
   text-transform: capitalize;
-  font-size: 1.1em;
+}
+.content .container .services-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.content .container .services-wrap::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  background: rgb(220, 219, 219);
+  background: linear-gradient(0deg, rgba(252, 252, 252, 0.9) 0%, rgba(142, 142, 142, 0.9) 60%);
+}
+.content .container .services-wrap .service {
+  width: 50%;
+  padding: 5% 0 4% 0;
+  position: relative;
+}
+.content .container .services-wrap .service::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background: rgb(252, 252, 252);
+  background: linear-gradient(270deg, rgba(252, 252, 252, 0.2) 0%, rgba(142, 142, 142, 0.6) 50%, rgba(252, 252, 252, 0.2) 100%);
+}
+.content .container .services-wrap .service ion-icon {
+  font-size: 2.5em;
+  color: #FA8128;
+  margin-bottom: 10px;
+  padding: 2.5%;
+  border-radius: 50%;
+  background: rgb(237, 112, 20);
+  background: linear-gradient(166deg, rgba(237, 112, 20, 0.3014546883) 0%, rgba(255, 255, 255, 0.2006143522) 100%);
+}
+.content .container .services-wrap .service h2 {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.content .container .services-wrap .service .service-content {
+  margin-top: 5px;
+}
+.content .container .services-wrap .service .service-content p {
+  font-size: 0.9em;
+}
+.content .container .services-wrap .service:nth-child(2), .content .container .services-wrap .service:nth-child(4) {
+  padding-left: 4%;
 }
 .content .my-profile {
   width: 32%;
