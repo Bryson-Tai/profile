@@ -1,20 +1,17 @@
 // Primary color
-$dark-purple: #ED7014;
-$lighter-dark-purple: #f27a25;
-$middle-purple: #FA8128;
-$light-purple: #f88d41;
-$light-middle-purple:#fda172;
-$lightest-purple: #f2b799;
+$dark-orange: #ED7014;
+$lighter-dark-orange: #f27a25;
+$middle-orange: #FA8128;
+$light-orange: #f88d41;
+$light-middle-orange:#fda172;
+$lightest-orange: #f2b799;
 $white: #fff;
 $black: #1f1f1f;
 
-$test: #EF9928;
-
-// Secondary color
-$darker-orange: #ED7014;
-// $darker-wood: #fad44d;
-$orange: #FA8128;
-$light-orange: #fda172;
+// Secondary Color
+$dark-purple: #452c63;
+$lighter-dark-purple: #5e3f7b;
+$middle-purple: #a377d9;
 
 *{
     margin: 0;
@@ -37,7 +34,7 @@ background: linear-gradient(162deg, rgba(69,44,99,1) 0%, rgba(163,119,217,1) 50%
 }
 
 .margin-top-3-6{
-    margin-top: 3.6em;
+    margin-top: 5em;
 }
 
 .auto-align-center{

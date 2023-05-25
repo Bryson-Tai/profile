@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@ body {
 }
 
 .margin-top-3-6 {
-  margin-top: 3.6em;
+  margin-top: 5em;
 }
 
 .auto-align-center {
@@ -60,7 +61,7 @@ body {
 }
 
 .margin-top-3-6 {
-  margin-top: 3.6em;
+  margin-top: 5em;
 }
 
 .auto-align-center {
@@ -88,85 +89,79 @@ body {
     background-position: bottom;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 100%;
   height: 80%;
   border-radius: 5px;
 }
 .content .content-relative {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: row-reverse;
 }
 .content header {
   width: 6%;
-  height: 100%;
+  height: 50%;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  padding: 0 6px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  transition: 0.6s all ease-in-out;
+}
+.content header nav {
+  height: 100%;
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 6px;
-  background: #ED7014;
-  border-radius: 0 5px 5px 0;
-}
-.content header nav {
-  height: 66%;
 }
 .content header nav ul {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 .content header nav ul li {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content header nav ul li i {
+  transition: 0.3s all ease-in-out;
+  font-size: 1.3em;
 }
 .content header nav ul li a {
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 0.9em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-transform: uppercase;
+  opacity: 0;
+  font-weight: 500;
+  font-size: 1em;
+  color: #ED7014;
 }
-.content header nav ul li a ion-icon {
-  font-size: 2em;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
+.content header:hover {
+  width: 7%;
 }
-.content header nav ul li a ion-icon:hover {
-  color: #FA8128;
-}
-.content header nav ul li:nth-child(2), .content header nav ul li:nth-child(4) {
-  height: 25%;
-}
-.content header nav ul li .connector {
-  position: relative;
-  width: 2px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.content header nav ul li .connector-1 {
-  background: rgb(74, 46, 108);
-  background: linear-gradient(0deg, rgb(74, 46, 108) 0%, rgb(237, 112, 20) 70%, rgb(255, 255, 255) 100%);
-}
-.content header nav ul li .connector-2 {
-  background: rgb(74, 46, 108);
-  background: linear-gradient(180deg, rgb(74, 46, 108) 0%, rgb(237, 112, 20) 70%, rgb(255, 255, 255) 100%);
+.content header:hover a {
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
 }
 .content .container {
   width: 62%;
@@ -174,11 +169,13 @@ body {
   background: rgba(255, 255, 255, 0.8666666667);
   padding: 2% 3% 1% 4%;
   overflow-y: scroll;
+  border-radius: 5px;
 }
 .content .container::-webkit-scrollbar {
   width: 6px;
 }
 .content .container::-webkit-scrollbar-track {
+  border-radius: 5px;
   background-color: #d9d9d9;
 }
 .content .container::-webkit-scrollbar-thumb {
@@ -200,8 +197,8 @@ body {
   border-radius: 50%;
   left: -1.5%;
   top: -12%;
-  background: rgb(136, 79, 207);
-  background: linear-gradient(129deg, rgb(136, 79, 207) 0%, rgba(136, 79, 207, 0.4611185539) 46%);
+  background: rgb(237, 112, 20);
+  background: linear-gradient(150deg, rgb(237, 112, 20) 0%, rgb(255, 179, 123) 29%, rgb(255, 251, 249) 100%);
 }
 .content .container .section_title::after {
   position: absolute;
@@ -209,21 +206,21 @@ body {
   width: 100%;
   height: 1px;
   left: -5%;
-  background: rgb(252, 252, 252);
-  background: linear-gradient(270deg, rgba(252, 252, 252, 0.6011745763) 0%, rgba(139, 139, 139, 0.7748440441) 100%);
+  background: radial-gradient(ellipse at left, #a5a5a5 0%, rgba(255, 255, 255, 0) 70%);
 }
 .content .container .section_title h1 {
   margin-bottom: 5px;
   font-size: 1.3em;
+  position: relative;
 }
 .content .container .section_title h1 span {
   color: #f27a25;
 }
 .content .container .intro_sect .intro_sect_about p {
   margin-top: 20px;
+  line-height: 1.7em;
 }
 .content .container .intro_sect .intro_sect_about p span {
-  color: #ED7014;
   font-weight: 500;
   font-size: 1.2em;
 }
@@ -236,17 +233,18 @@ body {
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 {
   font-size: 1em;
-  font-weight: 600;
-  color: #ED7014;
+  font-weight: 700;
+  color: #1f1f1f;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 .dot-wrap {
   letter-spacing: 5px;
   font-weight: 800;
-  color: #ED7014;
+  color: #452c63;
 }
 .content .container .intro_sect .intro_sect_about .biometric-wrap h2 .data-wrap {
+  font-weight: 600;
   text-transform: capitalize;
 }
 .content .container .services-wrap {
@@ -262,12 +260,11 @@ body {
   height: 100%;
   left: 50%;
   position: absolute;
-  background: rgb(220, 219, 219);
-  background: linear-gradient(0deg, rgba(252, 252, 252, 0.9) 0%, rgba(142, 142, 142, 0.9) 60%);
+  background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
 }
 .content .container .services-wrap .service {
   width: 50%;
-  padding: 5% 0 4% 0;
+  padding: 5% 3% 4% 0;
   position: relative;
 }
 .content .container .services-wrap .service::after {
@@ -276,14 +273,13 @@ body {
   height: 1px;
   position: absolute;
   bottom: 0;
-  background: rgb(252, 252, 252);
-  background: linear-gradient(270deg, rgba(252, 252, 252, 0.2) 0%, rgba(142, 142, 142, 0.6) 50%, rgba(252, 252, 252, 0.2) 100%);
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
 }
-.content .container .services-wrap .service ion-icon {
-  font-size: 2.5em;
+.content .container .services-wrap .service i {
+  font-size: 2.2em;
   color: #FA8128;
   margin-bottom: 10px;
-  padding: 2.5%;
+  padding: 4% 3%;
   border-radius: 50%;
   background: rgb(237, 112, 20);
   background: linear-gradient(166deg, rgba(237, 112, 20, 0.3014546883) 0%, rgba(255, 255, 255, 0.2006143522) 100%);
@@ -294,6 +290,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.content .container .services-wrap .service h2 span {
+  color: #452c63;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
 .content .container .services-wrap .service .service-content {
   margin-top: 5px;
 }
@@ -302,6 +303,81 @@ body {
 }
 .content .container .services-wrap .service:nth-child(2), .content .container .services-wrap .service:nth-child(4) {
   padding-left: 4%;
+}
+.content .container .pricing-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.content .container .pricing-wrap::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .container .pricing-wrap .pricing {
+  text-align: center;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding: 5% 2%;
+}
+.content .container .pricing-wrap .pricing::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .container .pricing-wrap .pricing i {
+  font-size: 2.2em;
+  color: #FA8128;
+  margin-bottom: 10px;
+}
+.content .container .pricing-wrap .pricing h2,
+.content .container .pricing-wrap .pricing h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.content .container .pricing-wrap .pricing ul {
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left;
+  width: 40%;
+}
+.content .container .pricing-wrap .pricing ul li {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+.content .container .pricing-wrap .pricing ul li:before {
+  content: "✔ ";
+  font-weight: 900;
+  margin-right: 7px;
+  color: #FA8128;
+}
+.content .container .pricing-wrap .pricing button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  border: none;
+  background: #452c63;
+  color: #ffffff;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.content .container .pricing-wrap .pricing button:hover {
+  background: #5e3f7b;
 }
 .content .my-profile {
   width: 32%;

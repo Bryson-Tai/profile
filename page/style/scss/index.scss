@@ -5,99 +5,70 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 100%;
     height: 80%;
     border-radius: 5px;
 
     .content-relative {
         position: relative;
-        width: 100%;
+        width: 80%;
         height: 100%;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: row-reverse;
     }
 
     header {
         width: 6%;
-        height: 100%;
+        height: 50%;
         min-width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 0 6px;
-        background: $dark-purple;
         border-radius: 0 5px 5px 0;
+        position: relative;
+        transition: 0.6s all ease-in-out;
 
         nav {
-            height: 66%;
+            height: 100%;
+            background: $white;
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             ul {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 align-items: center;
 
                 li {
-                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    i {
+                        transition: 0.3s all ease-in-out;
+                        font-size: 1.3em;
+                    }
+
                     a {
-                        color: $white;
-                        letter-spacing: 1px;
-                        font-size: 0.9em;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        text-transform: uppercase;
-
-                        ion-icon {
-                            font-size: 2em;
-                            color: $white;
-                            transition: all 0.3s ease-in-out;
-
-                            &:hover {
-                                color: $orange;
-                            }
-                        }
-                    }
-
-                    &:nth-child(2),
-                    &:nth-child(4) {
-                        height: 25%;
-                    }
-
-                    .connector {
-                        position: relative;
-                        width: 2px;
-                        height: 100%;
-                        // border-radius: 5px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        flex-direction: column;
-                    }
-
-                    .connector-1 {
-                        background: rgb(74, 46, 108);
-                        background: linear-gradient(
-                            0deg,
-                            rgba(74, 46, 108, 1) 0%,
-                            rgba(237, 112, 20, 1) 70%,
-                            rgba(255, 255, 255, 1) 100%
-                        );
-                    }
-
-                    .connector-2 {
-                        background: rgb(74, 46, 108);
-                        background: linear-gradient(
-                            180deg,
-                            rgba(74, 46, 108, 1) 0%,
-                            rgba(237, 112, 20, 1) 70%,
-                            rgba(255, 255, 255, 1) 100%
-                        );
+                        opacity: 0;
+                        font-weight: 500;
+                        font-size: 1em;
+                        color: $dark-orange;
                     }
                 }
+            }
+        }
+
+        &:hover {
+            width: 7%;
+            a {
+                opacity: 1;
+                animation: fadeIn 1s ease-in-out;
             }
         }
     }
@@ -108,12 +79,14 @@
         background: #ffffffdd;
         padding: 2% 3% 1% 4%;
         overflow-y: scroll;
+        border-radius: 5px;
 
         &::-webkit-scrollbar {
             width: 6px;
         }
 
         &::-webkit-scrollbar-track {
+            border-radius: 5px;
             background-color: #d9d9d9;
         }
 
@@ -125,7 +98,7 @@
         .section_title {
             font-size: 1.2em;
             font-weight: 600;
-            color: $dark-purple;
+            color: $dark-orange;
             position: relative;
             width: 100%;
 
@@ -137,11 +110,12 @@
                 border-radius: 50%;
                 left: -1.5%;
                 top: -12%;
-                background: rgb(136, 79, 207);
+                background: rgb(237, 112, 20);
                 background: linear-gradient(
-                    129deg,
-                    rgba(136, 79, 207, 1) 0%,
-                    rgba(136, 79, 207, 0.4611185538668593) 46%
+                    150deg,
+                    rgba(237, 112, 20, 1) 0%,
+                    rgba(255, 179, 123, 1) 29%,
+                    rgba(255, 251, 249, 1) 100%
                 );
             }
 
@@ -151,20 +125,16 @@
                 width: 100%;
                 height: 1px;
                 left: -5%;
-                background: rgb(252, 252, 252);
-                background: linear-gradient(
-                    270deg,
-                    rgba(252, 252, 252, 0.6011745762758228) 0%,
-                    rgba(139, 139, 139, 0.7748440440629376) 100%
-                );
+                background: radial-gradient(ellipse at left, #a5a5a5 0%, rgba(255, 255, 255, 0) 70%);
             }
 
             h1 {
                 margin-bottom: 5px;
                 font-size: 1.3em;
+                position: relative;
 
                 span {
-                    color: $lighter-dark-purple;
+                    color: $lighter-dark-orange;
                 }
             }
         }
@@ -173,8 +143,8 @@
             .intro_sect_about {
                 p {
                     margin-top: 20px;
+                    line-height: 1.7em;
                     span {
-                        color: $darker-orange;
                         font-weight: 500;
                         font-size: 1.2em;
                     }
@@ -189,8 +159,8 @@
 
                     h2 {
                         font-size: 1em;
-                        font-weight: 600;
-                        color: $dark-purple;
+                        font-weight: 700;
+                        color: $black;
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
@@ -201,6 +171,7 @@
                         }
 
                         .data-wrap {
+                            font-weight: 600;
                             text-transform: capitalize;
                         }
                     }
@@ -221,13 +192,12 @@
                 height: 100%;
                 left: 50%;
                 position: absolute;
-                background: rgb(220, 219, 219);
-                background: linear-gradient(0deg, rgba(252, 252, 252, 0.9) 0%, rgba(142, 142, 142, 0.9) 60%);
+                background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
             }
 
             .service {
                 width: 50%;
-                padding: 5% 0 4% 0;
+                padding: 5% 3% 4% 0;
                 position: relative;
 
                 &::after {
@@ -236,20 +206,14 @@
                     height: 1px;
                     position: absolute;
                     bottom: 0;
-                    background: rgb(252, 252, 252);
-                    background: linear-gradient(
-                        270deg,
-                        rgba(252, 252, 252, 0.2) 0%,
-                        rgba(142, 142, 142, 0.6) 50%,
-                        rgba(252, 252, 252, 0.2) 100%
-                    );
+                    background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
                 }
 
-                ion-icon {
-                    font-size: 2.5em;
-                    color: $orange;
+                i {
+                    font-size: 2.2em;
+                    color: $middle-orange;
                     margin-bottom: 10px;
-                    padding: 2.5%;
+                    padding: 4% 3%;
                     border-radius: 50%;
                     background: rgb(237, 112, 20);
                     background: linear-gradient(
@@ -264,6 +228,12 @@
                     font-weight: 700;
                     text-transform: uppercase;
                     letter-spacing: 1px;
+
+                    span{
+                        color: $dark-purple;
+                        text-decoration: underline;
+                        text-decoration-thickness: 4px;
+                    }
                 }
 
                 .service-content {
@@ -279,17 +249,91 @@
                     padding-left: 4%;
                 }
             }
+        }
 
-            #web-development {
+        .pricing-wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 100%;
+                left: 50%;
+                position: absolute;
+                background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
             }
 
-            #web-hosting {
-            }
+            .pricing {
+                text-align: center;
+                position: relative;
+                width: 50%;
+                height: 100%;
+                padding: 5% 2%;
 
-            #devops {
-            }
+                &::after {
+                    content: "";
+                    width: 90%;
+                    height: 1px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+                }
 
-            #uni-coursework {
+                i {
+                    font-size: 2.2em;
+                    color: $middle-orange;
+                    margin-bottom: 10px;
+                }
+
+                h2,
+                h3 {
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                ul{
+                    margin:0 auto;
+                    margin-top: 20px;
+                    text-align: left;
+                    width: 40%;
+
+                    li{
+                        font-size: 1em;
+                        margin-bottom: 10px;
+                    }
+
+                    li:before{
+                        content: "\2714\0020";
+                        font-weight: 900;
+                        margin-right: 7px;
+                        color: $middle-orange;
+                    }
+                }
+
+                button{
+                    margin-top: 20px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    border: none;
+                    background: $dark-purple;
+                    color: #ffffff;
+                    font-size: 0.9em;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover{
+                        background: $lighter-dark-purple;
+                    }
+                }
             }
         }
     }
