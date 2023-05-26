@@ -36,21 +36,21 @@
             <header>
                 <nav>
                     <ul>
-                        <li>
-                            <i class="fa fa-user"></i>
+                        <li class="after-horizontal">
                             <a href="#" id="about-tab">
+                                <i class="fa fa-user"></i>
                                 About
                             </a>
                         </li>
-                        <li>
-                            <i class="fa-brands fa-docker"></i>
+                        <li class="after-horizontal">
                             <a href="#" id="project-tab">
+                                <i class="fa-brands fa-docker"></i>
                                 Project
                             </a>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
+                        <li class="after-horizontal">
                             <a href="#" id="contact-tab">
+                                <i class="fa-solid fa-envelope"></i>
                                 Contact
                             </a>
                         </li>
@@ -99,7 +99,7 @@
                         <div class="service" id="devops">
                             <div class="service-title-wrap">
                                 <i class="fa-solid fa-gears"></i>
-                                <h2>Dev-<span>Ops</span></h2>
+                                <h2><span>Dev</span>-Ops</h2>
                             </div>
                             <div class="service-content-wrap">
                                 <div class="service-content">
@@ -161,32 +161,74 @@
 
                     <div class="pricing-wrap">
                         <div class="pricing">
-                            <i class="fa-solid fa-shield-halved"></i>
-                            <h2>Basic</h2>
-                            <h3>RM 400</h3>
-                            <ul>
-                                <li>1 Website</li>
-                                <li>1 Domain</li>
-                                <li>4 Emails</li>
-                                <li>1 Database</li>
-                                <li>1GB Storage</li>
-                                <li>1GB Bandwidth</li>
-                            </ul>
+                            <div class="pricing-content">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <h2>Advanced</h2>
+                                <h3>RM 400</h3>
+                                <ul>
+                                    <div class="ul-li-left">
+                                        <li>1 Website</li>
+                                        <li>1 Domain</li>
+                                        <li>4 Emails</li>
+                                    </div>
+                                    <div class="ul-li-right">
+                                        <li>1 Database</li>
+                                        <li>1GB Storage</li>
+                                        <li>1GB Bandwidth</li>
+                                    </div>
+                                </ul>
+                            </div>
                             <button id="basic-price-btn">Secure Now</button>
                         </div>
                         <div class="pricing">
-                            <i class="fa-solid fa-shield"></i>
-                            <h2>Advanced</h2>
-                            <h3>RM 800</h3>
-                            <ul>
-                                <li>1 Website</li>
-                                <li>1 Domain</li>
-                                <li>4 Emails</li>
-                                <li>1 Database</li>
-                                <li>1GB Storage</li>
-                                <li>1GB Bandwidth</li>
-                            </ul>
+                            <div class="pricing-content">
+                                <i class="fa-solid fa-shield"></i>
+                                <h2>Ultimate</h2>
+                                <h3>RM 800</h3>
+                                <ul>
+                                    <div class="ul-li-left">
+                                        <li>1 Website</li>
+                                        <li>1 Domain</li>
+                                        <li>4 Emails</li>
+                                    </div>
+                                    <div class="ul-li-right">
+                                        <li>1 Database</li>
+                                        <li>1GB Storage</li>
+                                        <li>1GB Bandwidth</li>
+                                    </div>
+                                </ul>
+                            </div>
                             <button id="adv-price-btn">Secure Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fun_fact_sect">
+                    <div class="section_title margin-top-3-6">
+                        <h1><span>Fun</span> Facts</h1>
+                    </div>
+
+                    <div class="fun-fact-wrap">
+                        <div class="fun-fact">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h2>Graduated</h2>
+                            <h3>Year <span>2023</span></h3>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fa-solid fa-kitchen-set"></i>
+                            <h2>Was A Chef</h2>
+                            <h3>Dim Sum & <span>Thai</span></h3>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Code</h2>
+                            <!-- TODO: Use Go Lang to add this dynamically -->
+                            <h3><span>4</span> Years</h3>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fa-solid fa-globe"></i>
+                            <h2>Travelled</h2>
+                            <h3><span>4</span> Countries</h3>
                         </div>
                     </div>
                 </div>
@@ -444,12 +486,35 @@
                 <!-- Put it last section -->
                 <div class="profile-wrap">
                     <div class="profile-img">
-                        <img src="img/profile.svg" alt="Profile Img">
+                    </div>
+                    <div class="profile-content">
+                        <h3>Bryson Tai</h3>
+                        <h4 id="job-position">Junior DevOps Engineer</h4>
+                        <div class="social-media">
+                            <a href="#"><i class="fa-brands fa-github"></i> </a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-wrap">
+                        <div class="btn-wrapper">
+                            <a class="cv-btn">
+                                My CV 
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="btn-wrapper">
+                            <a class="contact-me">
+                                Contact Me 
+                                <i class="fa-solid fa-arrows-turn-right"></i>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <!-- Github Link -->
-                <!-- LinkedIn Link -->
-                <!-- Facebook Link -->
             </div>
 
             <!-- <footer>
@@ -458,10 +523,6 @@
         </div>
     </div>
 
-
-
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
     <script src="https://kit.fontawesome.com/ba96d4e202.js" crossorigin="anonymous"></script>
     <script>
 
@@ -471,5 +532,15 @@
 
     </script>
 </body>
+
+<style>
+  a:hover {
+    color: red; /* Change this to your desired hover color for the text */
+  }
+
+  a:hover .fa-brands {
+    color: red; /* Change this to your desired hover color for the icon */
+  }
+</style>
 
 </html>

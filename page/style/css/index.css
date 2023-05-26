@@ -108,7 +108,7 @@ body {
 }
 .content .content-relative {
   position: relative;
-  width: 80%;
+  width: 82%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -116,11 +116,11 @@ body {
   flex-direction: row-reverse;
 }
 .content header {
-  width: 6%;
+  width: 8%;
   height: 50%;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  padding: 0 6px;
+  padding: 0 9px;
   border-radius: 0 5px 5px 0;
   position: relative;
   transition: 0.6s all ease-in-out;
@@ -138,30 +138,47 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .content header nav ul li {
   display: flex;
+  height: 33%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: relative;
+}
+.content header nav ul li::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content header nav ul li:nth-child(3)::after {
+  display: none;
 }
 .content header nav ul li i {
   transition: 0.3s all ease-in-out;
   font-size: 1.3em;
 }
 .content header nav ul li a {
-  opacity: 0;
   font-weight: 500;
   font-size: 1em;
-  color: #ED7014;
+  color: #1f1f1f;
+  transition: 0.3s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.content header:hover {
-  width: 7%;
+.content header nav ul li a:hover {
+  color: #FA8128;
 }
-.content header:hover a {
-  opacity: 1;
-  animation: fadeIn 1s ease-in-out;
+.content header nav ul li a:hover i {
+  color: #FA8128;
 }
 .content .container {
   width: 62%;
@@ -183,7 +200,7 @@ body {
   background-color: #a6a6a6;
 }
 .content .container .section_title {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 600;
   color: #ED7014;
   position: relative;
@@ -293,7 +310,7 @@ body {
 .content .container .services-wrap .service h2 span {
   color: #452c63;
   text-decoration: underline;
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 3px;
 }
 .content .container .services-wrap .service .service-content {
   margin-top: 5px;
@@ -321,12 +338,15 @@ body {
 }
 .content .container .pricing-wrap .pricing {
   text-align: center;
-  position: relative;
   width: 50%;
   height: 100%;
-  padding: 5% 2%;
+  padding: 0% 2%;
 }
-.content .container .pricing-wrap .pricing::after {
+.content .container .pricing-wrap .pricing .pricing-content {
+  position: relative;
+  padding: 10% 2%;
+}
+.content .container .pricing-wrap .pricing .pricing-content::after {
   content: "";
   width: 90%;
   height: 1px;
@@ -351,7 +371,10 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   text-align: left;
-  width: 40%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .content .container .pricing-wrap .pricing ul li {
   font-size: 1em;
@@ -379,12 +402,58 @@ body {
 .content .container .pricing-wrap .pricing button:hover {
   background: #5e3f7b;
 }
+.content .container .fun-fact-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.content .container .fun-fact-wrap .fun-fact {
+  width: 25%;
+  min-height: 100%;
+  padding: 5% 3%;
+  position: relative;
+}
+.content .container .fun-fact-wrap .fun-fact::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .container .fun-fact-wrap .fun-fact h3 {
+  margin-top: 15px;
+}
+.content .container .fun-fact-wrap .fun-fact i {
+  font-size: 2.2em;
+  color: #FA8128;
+  margin-bottom: 10px;
+}
+.content .container .fun-fact-wrap .fun-fact i:nth-child(2), .content .container .fun-fact-wrap .fun-fact i:nth-child(4) {
+  color: #452c63;
+}
+.content .container .fun-fact-wrap .fun-fact h2 {
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.content .container .fun-fact-wrap .fun-fact h3 {
+  font-size: 1.2em;
+}
+.content .container .fun-fact-wrap .fun-fact h3 span {
+  color: #452c63;
+}
 .content .my-profile {
   width: 32%;
   height: 100%;
   background: #ffffff;
   transform: scale(110%);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   position: relative;
 }
@@ -405,4 +474,121 @@ body {
   height: 100%;
   border-radius: 5px;
   background-color: #fefefe;
+}
+.content .my-profile .profile-wrap .profile-img {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  border-radius: 5px;
+  background-image: url("../../assest/img/profile-pic.jpg");
+  background-size: 100% 100%;
+  background: contain;
+}
+.content .my-profile .profile-wrap .profile-img::before {
+  content: "";
+  -webkit-clip-path: polygon(0 74%, 0% 100%, 59% 100%);
+          clip-path: polygon(0 74%, 0% 100%, 59% 100%);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 27%;
+  left: auto;
+  background: white;
+}
+.content .my-profile .profile-wrap .profile-img::after {
+  content: "";
+  -webkit-clip-path: polygon(46% 100%, 100% 100%, 100% 53%);
+          clip-path: polygon(46% 100%, 100% 100%, 100% 53%);
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 39%;
+  left: auto;
+  background: white;
+}
+.content .my-profile .profile-wrap .profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content .my-profile .profile-wrap .profile-content {
+  height: 31%;
+  padding: 3% 7%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.content .my-profile .profile-wrap .profile-content h3 {
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.content .my-profile .profile-wrap .profile-content h4 {
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ED7014;
+  margin-top: 15px;
+}
+.content .my-profile .profile-wrap .profile-content .social-media {
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.content .my-profile .profile-wrap .contact-wrap {
+  height: 9%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+.content .my-profile .profile-wrap .contact-wrap::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .my-profile .profile-wrap .contact-wrap div {
+  width: 50%;
+  height: 100%;
+  padding: 5% 0;
+}
+.content .my-profile .profile-wrap .contact-wrap div i {
+  transition: 0.3s all ease-in-out;
+}
+.content .my-profile .profile-wrap .contact-wrap div a {
+  letter-spacing: 1px;
+  color: #1f1f1f;
+  font-size: 0.95em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.content .my-profile .profile-wrap .contact-wrap div a:hover {
+  color: #ED7014;
+}
+.content .my-profile .profile-wrap .contact-wrap div a:hover i {
+  color: #ED7014;
+}
+.content .my-profile .profile-wrap .contact-wrap div:nth-child(1) {
+  position: relative;
+}
+.content .my-profile .profile-wrap .contact-wrap div:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: radial-gradient(ellipse at center, #656565 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .my-profile .profile-wrap .contact-wrap div:nth-child(2) {
+  border-radius: 0 0 5px 0;
 }/*# sourceMappingURL=index.css.map */
