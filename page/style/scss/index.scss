@@ -425,132 +425,223 @@
             }
         }
 
-        .resume_wrap {
-            position: relative;
+        .resume_sect{
 
-            &:after{
-                content: "";
-                width: 2px;
-                height: 100%;
-                left: 50%;
-                top: 0;
-                position: absolute;                 
-                background: radial-gradient(ellipse at top, darken(#dddddd, 10%) 0%, rgba(255, 255, 255, 0) 70%);
-            }
-
-            .top_wrap {
+            .title{
                 display: flex;
-                justify-content: space-between;
-
-                .grey{
-                    color: #999;
-                    border-color: #999 !important;
+                align-items: center;
+                text-transform: uppercase;
+                position: relative;
+                padding: 20px 20px 20px 0;
+                
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+                    margin-left: 10px;
                 }
 
-                
-                .resume {
-                    width: 50%;
-                    height: 100%;
+                i {
+                    font-size: 2em;
+                    color: $dark-orange;
+                }
+
+                h2 {
+                    margin-left: 10px;
+                    font-weight: 500;
+                    font-size: 1.1em;
+                }
+            }
+
+            .resume_wrap {
+                .work_education_wrap {
                     display: flex;
                     justify-content: space-between;
-                    flex-direction: column;
-
-                    &:nth-child(2) {
-                        padding-left: 5%;
+                    position: relative;
+    
+                    .grey{
+                        color: #999;
+                        border-color: #999 !important;
                     }
-
-                    .education_title,
-                    .job-title {
+    
+                    &:after{
+                        content: "";
+                        width: 2px;
+                        height: 100%;
+                        left: 50%;
+                        top: 0;
+                        position: absolute;                 
+                        background: radial-gradient(ellipse at top, darken(#dddddd, 10%) 0%, rgba(255, 255, 255, 0) 70%);
+                    }
+                    
+                    .resume {
+                        width: 50%;
+                        height: 100%;
                         display: flex;
-                        align-items: center;
-                        text-transform: uppercase;
-                        position: relative;
-                        padding: 20px 20px 20px 0;
-                        
-                        &::after{
-                            content: "";
-                            width: 100%;
-                            height: 1px;
-                            bottom: 0;
-                            left: 0;
-                            position: absolute;
-                            background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-                            margin-left: 10px;
+                        justify-content: space-between;
+                        flex-direction: column;
+    
+                        &:nth-child(2) {
+                            padding-left: 5%;
                         }
-
-                        i {
-                            font-size: 2em;
-                            color: $dark-orange;
-                        }
-
-                        h2 {
-                            margin-left: 10px;
-                            font-weight: 500;
-                            font-size: 1.1em;
+    
+                        .resume_box {
+                            padding: 7% 5% 7% 0;
+                            position: relative;
+    
+                            &::after{
+                                content: "";
+                                width: 100%;
+                                height: 1px;
+                                bottom: 0;
+                                left: 0;
+                                position: absolute;
+                                background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+                                margin-left: 10px;
+                            }
+    
+                            h3{
+                                width: fit-content;
+                                padding: 1px 5px;
+                                border-radius: 5px;
+                                font-size: 0.8em;
+                                font-weight: 400;
+                                border: 1px solid $dark-orange;
+                            }
+    
+                            h4{
+                                font-size: 1.1em;
+                                font-weight: 800;
+                                margin-top: 10px;
+                                
+                                a{
+                                    i{
+                                        transition: all 0.3s ease-in-out;
+                                    }
+                                    &:hover{
+                                        i{
+                                            color: $dark-orange;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            h5{
+                                font-size: 0.9em;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                color: #656565c1;
+                            }
+    
+                            p{
+                                font-size: 1em;
+                                font-weight: 500;
+                                line-height: 1.7em;
+    
+                                span{
+                                    color: $dark-purple;
+                                    font-weight: 600;
+                                }
+                            }
                         }
                     }
+                }
+            }
 
-                    .resume_box {
-                        padding: 7% 5% 7% 0;
-                        position: relative;
+            .abilities_wrap{
+                width: 100%;
 
-                        &::after{
-                            content: "";
-                            width: 100%;
-                            height: 1px;
-                            bottom: 0;
-                            left: 0;
-                            position: absolute;
-                            background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-                            margin-left: 10px;
+                .ability_wrap{
+                    position: relative;
+
+                    .ability{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+
+                        &:nth-child(2){
+                            margin-top: 30px;
                         }
 
-                        h3{
-                            width: fit-content;
-                            padding: 1px 5px;
-                            border-radius: 5px;
-                            font-size: 0.8em;
-                            font-weight: 400;
-                            border: 1px solid $dark-orange;
-                        }
+                        .ability_box{
+                            min-width: 50%;
+                            max-width: 50%;
+                            padding: 3% 3% 5% 0;
+                            position: relative;
 
-                        h4{
-                            font-size: 1.1em;
-                            font-weight: 800;
-                            margin-top: 10px;
-                            
-                            a{
-                                i{
-                                    transition: all 0.3s ease-in-out;
+                            &:nth-child(2){
+                                padding-left: 5%;
+                            }
+
+                            &:nth-child(1){
+                                &::before{
+                                    content: "";
+                                    width: 2px;
+                                    height: 100%;
+                                    right: 0;
+                                    top: 0;
+                                    position: absolute;
+                                    background: radial-gradient(ellipse at top, darken(#dddddd, 10%) 0%, rgba(255, 255, 255, 0) 70%);
                                 }
-                                &:hover{
-                                    i{
-                                        color: $dark-orange;
+                            }
+                        }
+
+                        .knowledge{
+                            ul{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 20px;
+                                width: 90%;
+                                
+                                li{
+                                    font-size: 1.05em;
+                                    font-weight: 500;
+                                    line-height: 1.7em;
+                                    color: #424242db;
+
+                                    &::before{
+                                        content: "✓";
+                                        margin-right: 10px;
+                                        color: $dark-purple;
+                                        font-weight: bold;
+                                        font-size: 1.1em;
                                     }
                                 }
                             }
                         }
 
-                        h5{
-                            font-size: 0.9em;
-                            font-weight: 400;
-                            margin-bottom: 10px;
-                            color: #656565c1;
-                        }
+                        .coding{
+                            ul{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: 20px;
+                                width: 90%;
+                                
+                                li{
+                                    font-size: 1.05em;
+                                    font-weight: 500;
+                                    line-height: 1.7em;
+                                    color: #424242db;
 
-                        p{
-                            font-size: 1em;
-                            font-weight: 500;
-                            line-height: 1.7em;
-
-                            span{
-                                color: $dark-purple;
-                                font-weight: 600;
+                                    &::before{
+                                        content: "✓";
+                                        margin-right: 10px;
+                                        color: $dark-purple;
+                                        font-weight: bold;
+                                        font-size: 1.1em;
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
+
         }
     }
 

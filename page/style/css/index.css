@@ -460,10 +460,42 @@ body {
 .content .container .intro_sect .fun-fact-wrap .fun-fact h3 span {
   color: #452c63;
 }
-.content .container .resume_wrap {
+.content .container .resume_sect .title {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  padding: 20px 20px 20px 0;
+}
+.content .container .resume_sect .title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+  margin-left: 10px;
+}
+.content .container .resume_sect .title i {
+  font-size: 2em;
+  color: #ED7014;
+}
+.content .container .resume_sect .title h2 {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.content .container .resume_sect .resume_wrap .work_education_wrap {
+  display: flex;
+  justify-content: space-between;
   position: relative;
 }
-.content .container .resume_wrap:after {
+.content .container .resume_sect .resume_wrap .work_education_wrap .grey {
+  color: #999;
+  border-color: #999 !important;
+}
+.content .container .resume_sect .resume_wrap .work_education_wrap:after {
   content: "";
   width: 2px;
   height: 100%;
@@ -472,59 +504,21 @@ body {
   position: absolute;
   background: radial-gradient(ellipse at top, #c4c4c4 0%, rgba(255, 255, 255, 0) 70%);
 }
-.content .container .resume_wrap .top_wrap {
-  display: flex;
-  justify-content: space-between;
-}
-.content .container .resume_wrap .top_wrap .grey {
-  color: #999;
-  border-color: #999 !important;
-}
-.content .container .resume_wrap .top_wrap .resume {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume {
   width: 50%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-.content .container .resume_wrap .top_wrap .resume:nth-child(2) {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume:nth-child(2) {
   padding-left: 5%;
 }
-.content .container .resume_wrap .top_wrap .resume .education_title,
-.content .container .resume_wrap .top_wrap .resume .job-title {
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  position: relative;
-  padding: 20px 20px 20px 0;
-}
-.content .container .resume_wrap .top_wrap .resume .education_title::after,
-.content .container .resume_wrap .top_wrap .resume .job-title::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-  margin-left: 10px;
-}
-.content .container .resume_wrap .top_wrap .resume .education_title i,
-.content .container .resume_wrap .top_wrap .resume .job-title i {
-  font-size: 2em;
-  color: #ED7014;
-}
-.content .container .resume_wrap .top_wrap .resume .education_title h2,
-.content .container .resume_wrap .top_wrap .resume .job-title h2 {
-  margin-left: 10px;
-  font-weight: 500;
-  font-size: 1.1em;
-}
-.content .container .resume_wrap .top_wrap .resume .resume_box {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box {
   padding: 7% 5% 7% 0;
   position: relative;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box::after {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -534,7 +528,7 @@ body {
   background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
   margin-left: 10px;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box h3 {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h3 {
   width: -moz-fit-content;
   width: fit-content;
   padding: 1px 5px;
@@ -543,31 +537,102 @@ body {
   font-weight: 400;
   border: 1px solid #ED7014;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box h4 {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h4 {
   font-size: 1.1em;
   font-weight: 800;
   margin-top: 10px;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box h4 a i {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h4 a i {
   transition: all 0.3s ease-in-out;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box h4 a:hover i {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h4 a:hover i {
   color: #ED7014;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box h5 {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h5 {
   font-size: 0.9em;
   font-weight: 400;
   margin-bottom: 10px;
   color: rgba(101, 101, 101, 0.7568627451);
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box p {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box p {
   font-size: 1em;
   font-weight: 500;
   line-height: 1.7em;
 }
-.content .container .resume_wrap .top_wrap .resume .resume_box p span {
+.content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box p span {
   color: #452c63;
   font-weight: 600;
+}
+.content .container .resume_sect .abilities_wrap {
+  width: 100%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap {
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability:nth-child(2) {
+  margin-top: 30px;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .ability_box {
+  min-width: 50%;
+  max-width: 50%;
+  padding: 3% 3% 5% 0;
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .ability_box:nth-child(2) {
+  padding-left: 5%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .ability_box:nth-child(1)::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  background: radial-gradient(ellipse at top, #c4c4c4 0%, rgba(255, 255, 255, 0) 70%);
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 90%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul li {
+  font-size: 1.05em;
+  font-weight: 500;
+  line-height: 1.7em;
+  color: rgba(66, 66, 66, 0.8588235294);
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #452c63;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 90%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul li {
+  font-size: 1.05em;
+  font-weight: 500;
+  line-height: 1.7em;
+  color: rgba(66, 66, 66, 0.8588235294);
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #452c63;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 .content .my-profile {
   width: 32%;
