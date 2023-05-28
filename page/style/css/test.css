@@ -14,7 +14,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background: rgb(69, 44, 99);
+  background: rgb(69, 44, 99) no-repeat;
   background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
@@ -41,4 +41,46 @@ body {
 
 .font-orange {
   color: #ED7014;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgb(242, 233, 251) no-repeat;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .circle-wrap {
+  width: 300px;
+  height: 300px;
+}
+.container .circle-wrap .outer-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.container .circle-wrap .outer-circle .inner-circle {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=test.css.map */

@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background: rgb(69, 44, 99);
+  background: rgb(69, 44, 99) no-repeat;
   background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
@@ -60,7 +60,7 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  background: rgb(69, 44, 99);
+  background: rgb(69, 44, 99) no-repeat;
   background: linear-gradient(162deg, rgb(69, 44, 99) 0%, rgb(163, 119, 217) 50%, rgb(205, 172, 246) 100%);
 }
 
@@ -575,8 +575,8 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability:nth-child(2) {
-  margin-top: 30px;
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability:nth-child(2) .ability_box {
+  padding: 0 3% 5% 0;
 }
 .content .container .resume_sect .abilities_wrap .ability_wrap .ability .ability_box {
   min-width: 50%;
@@ -598,41 +598,175 @@ body {
 }
 .content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-direction: column;
   margin-top: 20px;
-  width: 90%;
+  width: 100%;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul li {
-  font-size: 1.05em;
-  font-weight: 500;
-  line-height: 1.7em;
-  color: rgba(66, 66, 66, 0.8588235294);
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul .li_i_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3% 0%;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul li::before {
-  content: "✓";
-  margin-right: 10px;
-  color: #452c63;
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul .li_i_wrap i {
+  font-size: 1.4em;
+  color: #5e3f7b;
   font-weight: bold;
-  font-size: 1.1em;
+  margin-right: 20px;
+  text-align: center;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul {
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .knowledge ul .li_i_wrap li {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #303030;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding {
+  padding-right: 5%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box {
+  width: 100%;
+  padding: 8% 4%;
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+  margin-left: 10px;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box:last-child:after {
+  display: none;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box .progress_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9em;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box .progress_title > * {
+  color: #303030;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box .progress {
+  width: 100%;
+  height: 6px;
+  background: #dddddd;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding .progress_box .progress .progress_bar {
+  position: absolute;
+  height: 100%;
+  background: #5e3f7b;
+  border-radius: 5px;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap {
+  width: 100%;
+  padding: 2% 7% 6% 4%;
+  margin-top: 10px;
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap .grey-btn {
+  color: rgba(154, 154, 154, 0.5764705882) !important;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+  margin-left: 10px;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap:last-child:after {
+  display: none;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap li {
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #303030;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap .progress_btns_wrap {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  width: 90%;
+  margin-top: 7px;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul li {
-  font-size: 1.05em;
-  font-weight: 500;
-  line-height: 1.7em;
-  color: rgba(66, 66, 66, 0.8588235294);
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .soft_skills ul .li_i_wrap .progress_btns_wrap i {
+  font-size: 1em;
+  color: #5e3f7b;
+  text-align: center;
 }
-.content .container .resume_sect .abilities_wrap .ability_wrap .ability .coding ul li::before {
-  content: "✓";
-  margin-right: 10px;
-  color: #452c63;
-  font-weight: bold;
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .flex .upper-wrap,
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .flex .bottom-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .circle-wrap {
+  width: 100%;
+  height: 100%;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .circle-wrap h2 {
   font-size: 1.1em;
+  font-weight: 400;
+  color: #303030;
+  margin: 10px 0;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .circle-wrap .outer-circle {
+  width: 86%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .circle-wrap .outer-circle .inner-circle {
+  width: 83%;
+  height: 83%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-color: #efefef;
+  text-align: center;
+}
+.content .container .resume_sect .abilities_wrap .ability_wrap .ability .language .circle-wrap .outer-circle .inner-circle span {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #303030;
+  margin: 10px 0;
 }
 .content .my-profile {
   width: 32%;

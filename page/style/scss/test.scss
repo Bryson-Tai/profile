@@ -1,1 +1,50 @@
 @import "./common";
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgb(242, 233, 251) no-repeat;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .circle-wrap{
+        width: 300px;
+        height: 300px;
+
+        .outer-circle{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            .inner-circle{
+                width: 75%;
+                height: 75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 50%;
+                background-color: $white;
+                box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+            }
+
+
+        }
+    }
+}
+
+

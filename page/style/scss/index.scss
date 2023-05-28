@@ -425,16 +425,15 @@
             }
         }
 
-        .resume_sect{
-
-            .title{
+        .resume_sect {
+            .title {
                 display: flex;
                 align-items: center;
                 text-transform: uppercase;
                 position: relative;
                 padding: 20px 20px 20px 0;
-                
-                &::after{
+
+                &::after {
                     content: "";
                     width: 100%;
                     height: 1px;
@@ -462,38 +461,42 @@
                     display: flex;
                     justify-content: space-between;
                     position: relative;
-    
-                    .grey{
+
+                    .grey {
                         color: #999;
                         border-color: #999 !important;
                     }
-    
-                    &:after{
+
+                    &:after {
                         content: "";
                         width: 2px;
                         height: 100%;
                         left: 50%;
                         top: 0;
-                        position: absolute;                 
-                        background: radial-gradient(ellipse at top, darken(#dddddd, 10%) 0%, rgba(255, 255, 255, 0) 70%);
+                        position: absolute;
+                        background: radial-gradient(
+                            ellipse at top,
+                            darken(#dddddd, 10%) 0%,
+                            rgba(255, 255, 255, 0) 70%
+                        );
                     }
-                    
+
                     .resume {
                         width: 50%;
                         height: 100%;
                         display: flex;
                         justify-content: space-between;
                         flex-direction: column;
-    
+
                         &:nth-child(2) {
                             padding-left: 5%;
                         }
-    
+
                         .resume_box {
                             padding: 7% 5% 7% 0;
                             position: relative;
-    
-                            &::after{
+
+                            &::after {
                                 content: "";
                                 width: 100%;
                                 height: 1px;
@@ -503,8 +506,8 @@
                                 background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
                                 margin-left: 10px;
                             }
-    
-                            h3{
+
+                            h3 {
                                 width: fit-content;
                                 padding: 1px 5px;
                                 border-radius: 5px;
@@ -512,37 +515,37 @@
                                 font-weight: 400;
                                 border: 1px solid $dark-orange;
                             }
-    
-                            h4{
+
+                            h4 {
                                 font-size: 1.1em;
                                 font-weight: 800;
                                 margin-top: 10px;
-                                
-                                a{
-                                    i{
+
+                                a {
+                                    i {
                                         transition: all 0.3s ease-in-out;
                                     }
-                                    &:hover{
-                                        i{
+                                    &:hover {
+                                        i {
                                             color: $dark-orange;
                                         }
                                     }
                                 }
                             }
-    
-                            h5{
+
+                            h5 {
                                 font-size: 0.9em;
                                 font-weight: 400;
                                 margin-bottom: 10px;
                                 color: #656565c1;
                             }
-    
-                            p{
+
+                            p {
                                 font-size: 1em;
                                 font-weight: 500;
                                 line-height: 1.7em;
-    
-                                span{
+
+                                span {
                                     color: $dark-purple;
                                     font-weight: 600;
                                 }
@@ -552,88 +555,263 @@
                 }
             }
 
-            .abilities_wrap{
+            .abilities_wrap {
                 width: 100%;
 
-                .ability_wrap{
+                .ability_wrap {
                     position: relative;
 
-                    .ability{
+                    .ability {
                         width: 100%;
                         display: flex;
                         flex-wrap: wrap;
                         flex-direction: row;
 
                         &:nth-child(2){
-                            margin-top: 30px;
+                            .ability_box{
+                                padding: 0 3% 5% 0;
+                            }
                         }
 
-                        .ability_box{
+                        .ability_box {
                             min-width: 50%;
                             max-width: 50%;
                             padding: 3% 3% 5% 0;
                             position: relative;
 
-                            &:nth-child(2){
+                            &:nth-child(2) {
                                 padding-left: 5%;
                             }
 
-                            &:nth-child(1){
-                                &::before{
+                            &:nth-child(1) {
+                                &::before {
                                     content: "";
                                     width: 2px;
                                     height: 100%;
                                     right: 0;
                                     top: 0;
                                     position: absolute;
-                                    background: radial-gradient(ellipse at top, darken(#dddddd, 10%) 0%, rgba(255, 255, 255, 0) 70%);
+                                    background: radial-gradient(
+                                        ellipse at top,
+                                        darken(#dddddd, 10%) 0%,
+                                        rgba(255, 255, 255, 0) 70%
+                                    );
                                 }
                             }
                         }
 
-                        .knowledge{
-                            ul{
+                        .knowledge {
+                            ul {
                                 display: flex;
-                                justify-content: space-between;
+                                justify-content: flex-start;
+                                flex-direction: column;
                                 margin-top: 20px;
-                                width: 90%;
-                                
-                                li{
-                                    font-size: 1.05em;
-                                    font-weight: 500;
-                                    line-height: 1.7em;
-                                    color: #424242db;
+                                width: 100%;
 
-                                    &::before{
-                                        content: "✓";
-                                        margin-right: 10px;
-                                        color: $dark-purple;
+                                .li_i_wrap {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    padding: 3% 0%;
+
+                                    i {
+                                        font-size: 1.4em;
+                                        color: $lighter-dark-purple;
                                         font-weight: bold;
+                                        margin-right: 20px;
+                                        text-align: center;
+                                    }
+
+                                    li {
                                         font-size: 1.1em;
+                                        font-weight: 600;
+                                        line-height: 1.5em;
+                                        color: #303030;
                                     }
                                 }
                             }
                         }
 
-                        .coding{
-                            ul{
-                                display: flex;
-                                justify-content: space-between;
-                                margin-top: 20px;
-                                width: 90%;
-                                
-                                li{
-                                    font-size: 1.05em;
-                                    font-weight: 500;
-                                    line-height: 1.7em;
-                                    color: #424242db;
+                        .coding {
+                            padding-right: 5%;
 
-                                    &::before{
-                                        content: "✓";
-                                        margin-right: 10px;
-                                        color: $dark-purple;
+                            .progress_box {
+                                width: 100%;
+                                padding: 8% 4%;
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    width: 100%;
+                                    height: 1px;
+                                    bottom: 0;
+                                    left: 0;
+                                    position: absolute;
+                                    background: radial-gradient(
+                                        ellipse at center,
+                                        #dddddd 0%,
+                                        rgba(255, 255, 255, 0) 70%
+                                    );
+                                    margin-left: 10px;
+                                }
+
+                                &:last-child{
+                                    &:after{
+                                        display: none;
+                                    }
+                                }
+
+                                .progress_title {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    font-size: 0.9em;
+                                    
+                                    &>*{
+                                        color: #303030;
+                                    }
+                                }
+
+                                .progress {
+                                    width: 100%;
+                                    height: 6px;
+                                    background: #dddddd;
+                                    border-radius: 5px;
+                                    margin-top: 5px;
+                                    position: relative;
+
+                                    .progress_bar {
+                                        position: absolute;
+                                        height: 100%;
+                                        background: $lighter-dark-purple;
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .soft_skills {
+                            ul {
+                                .li_i_wrap {
+                                    width: 100%;
+                                    padding: 2% 7% 6% 4%;
+                                    margin-top: 10px;
+                                    position: relative;
+
+                                    .grey-btn{
+                                        color: #9a9a9a93 !important;
+                                    }
+
+                                    &::after{
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        bottom: 0;
+                                        left: 0;
+                                        position: absolute;
+                                        background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+                                        margin-left: 10px;
+                                    }
+
+                                    &:last-child{
+                                        &:after{
+                                            display: none;
+                                        }
+                                    }
+
+                                    li {
+                                        font-size: 1.05em;
                                         font-weight: bold;
-                                        font-size: 1.1em;
+                                        color: #303030;
+                                    }
+
+                                    .progress_btns_wrap{
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        margin-top: 7px;
+
+                                        i {
+                                            font-size: 1em;
+                                            color: $lighter-dark-purple;
+                                            text-align: center;
+                                        }
+                                    }
+
+                                    
+                                }
+                            }
+                        }
+
+                        .language{
+                            
+                            .flex{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                align-items: center;
+                                height: 75%;
+                                width: 100%;
+
+                                .upper-wrap,
+                                .bottom-wrap{
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-top: 30px;
+                                }
+                            }
+
+                            .circle-wrap{
+                                width: 100%;
+                                height: 100%;
+                                padding: 0% 5%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content:center;
+                                align-items: center;
+                                text-align: center;
+
+                                h2{
+                                    font-size: 1.1em;
+                                    font-weight: 400;
+                                    color: #303030;
+                                    margin: 10px 0;
+                                }
+                        
+                                .outer-circle{
+                                    width: 86%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    background-color: $white;
+                                    display: flex;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    position: relative;
+                        
+                                    .inner-circle{
+                                        width: 83%;
+                                        height: 83%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        border-radius: 50%;
+                                        background-color: #efefef;
+                                        text-align: center;
+
+                                        span{
+                                            font-size: 1.1em;
+                                            font-weight: bold;
+                                            color: #303030;
+                                            margin: 10px 0;
+                                        }
                                     }
                                 }
                             }
@@ -641,7 +819,6 @@
                     }
                 }
             }
-
         }
     }
 

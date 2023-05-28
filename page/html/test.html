@@ -16,10 +16,41 @@
 
 <body>
     <div class="container">
-        <div class="abilities">
-            
+        <div class="circle-wrap">
+            <div class="outer-circle">
+                <div class="inner-circle">
+                    <h1>English</h1>
+                    <h2> 0% </h2>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        incrementCircle(65);
+    })
+
+    function incrementCircle(value) {
+        outerCircle = document.querySelector('.outer-circle');
+        percentageValue = document.querySelector('.outer-circle h2');
+
+        let progressValue = 0;
+        let progressEndValue = value;
+
+        setInterval(() => {
+            if (progressValue < progressEndValue) {
+                progressValue++
+                percentageValue.textContent = `${progressValue}%`
+                outerCircle.style.background = `conic-gradient(
+                    #ff0000 ${progressValue}%, 
+                    #fff ${progressValue}% 100%
+                )`
+            }
+        }, 30)
+    }
+</script>
 
 </html>
