@@ -12,8 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,600;1,900&display=swap"
         rel="stylesheet">
-
-
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <title>About Bryson</title>
 </head>
 
@@ -834,7 +833,7 @@
                     </div>
                     <div class="profile-content">
                         <h3>Bryson Tai</h3>
-                        <h4 id="job-position">Junior DevOps Engineer</h4>
+                        <h4 id="job-position"></h4>
                         <div class="social-media">
                             <a href="https://github.com/Bryson-Tai"><i class="fa-brands fa-github"></i> </a>
                             <a href="https://www.linkedin.com/in/wan-ke-tai-531453235/"><i
@@ -864,9 +863,20 @@
     </div>
 
     <script src="https://kit.fontawesome.com/ba96d4e202.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
-
-
+        document.addEventListener('DOMContentLoaded', () => {
+            // Type Writer for Job Position
+            var typed = new Typed('#job-position', {
+                strings: ['Junior DevOps Engineer', 'Web Developer', 'Programmer','Freelancer'],
+                typeSpeed: 80,
+                backSpeed: 50,
+                startDelay: 200,
+                backDelay: 1000,
+                loop: true,
+                showCursor: false,
+            });
+        });
         document.getElementsByClassName("container")[0].addEventListener('scroll', (c) => {
             let progressBarStyleExist = document.querySelectorAll('.progress_bar')[0].hasAttribute('style');
             let outerCircleStyleExist = document.querySelectorAll('.outer-circle')[0].hasAttribute('style');
@@ -920,6 +930,8 @@
                 }, 15)
             })
         }
+
+
     </script>
 </body>
 
