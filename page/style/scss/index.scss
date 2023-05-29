@@ -954,12 +954,12 @@
                                 width: 20%;
                                 height: 40px;
                                 border: none;
-                                background-color: $lighter-dark-orange;
+                                background-color: $dark-orange;
                                 color: $white;
                                 cursor: pointer;
 
                                 &:hover {
-                                    background-color: $dark-purple;
+                                    background-color: $light-orange;
                                 }
                             }
                         }

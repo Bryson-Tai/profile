@@ -882,12 +882,12 @@ body {
   width: 20%;
   height: 40px;
   border: none;
-  background-color: #f27a25;
+  background-color: #ED7014;
   color: #fff;
   cursor: pointer;
 }
 .content .container .contact_sect .email_wrap form .contact_form .contact_input input[type=submit]:hover {
-  background-color: #452c63;
+  background-color: #f88d41;
 }
 .content .my-profile {
   width: 32%;
