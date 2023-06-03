@@ -36,7 +36,7 @@
                 <nav>
                     <ul>
                         <li class="after-horizontal">
-                            <a href="#" id="about-tab">
+                            <a href="#" id="intro-tab" class="font-orange">
                                 <i class="fa fa-user"></i>
                                 About
                             </a>
@@ -63,7 +63,7 @@
                 </nav>
             </header>
 
-            <div class="container">
+            <div class="container" id="container">
                 <section class="intro_sect">
                     <div class="intro_sect_about">
                         <div class="section_title">
@@ -78,7 +78,7 @@
                         <div class="biometric-wrap">
                             <div class="left-wrap">
                                 <!-- TODO Use Go Lang to increase the age dynamically -->
-                                <h2>Age<span class="dot-wrap"> .......</span><span class="data-wrap">27</span></h2>
+                                <h2>Age<span class="dot-wrap"> .......</span><span class="data-wrap" id="age_count">27</span></h2>
                                 <h2>Residence<span class="dot-wrap"> .......</span><span
                                         class="data-wrap">Malaysia</span></h2>
                             </div>
@@ -235,6 +235,17 @@
                                 <h2>Travelled</h2>
                                 <h3><span>4</span> Countries</h3>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project_sect">
+                    <div class="construction_wrap">
+                        <div class="left">
+                            <img src="../assest/img/under_construction_woody-removebg.png" alt="Contruction">
+                        </div>
+                        <div class="right">
+                            <h1>Stay Tuned...🤪</h1>
                         </div>
                     </div>
                 </section>
@@ -554,217 +565,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="abilities_sect">
-                        <div class="devops segment">
-                            <div class="segment-title-wrap">
-                                <i class="fa-infinity fa"></i>
-                                <h2>DevOps Engineering</h2>
-                            </div>
-                            <div class="devops-inner-wrap">
-                                <div class="devops-left">
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Docker</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="docker"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Kubernetes</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="kubernetes"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Terraform</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="terraform"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Ansible</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="ansible"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="devops-right">
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Bash</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="bash"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>CI/CD</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="cicd"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ability-wrap">
-                                        <div class="title-wrap">
-                                            <h2>Git</h2>
-                                            <h3>100%</h3>
-                                        </div>
-                                        <div class="progress-box">
-                                            <div class="percentage">
-                                                <span id="git"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cloud-provider segment">
-                            <div class="segment-title-wrap">
-                                <i class="fa-cloud fa"></i>
-                                <h2>Cloud Provider</h2>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>AWS</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="aws"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>GCP</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="gcp"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>AliCloud</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="alicloud"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="web-development segment">
-                            <div class="segment-title-wrap">
-                                <i class="fa-terminal fa"></i>
-                                <h2>Web Development</h2>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>HTML</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="html"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>CSS</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="CSS"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>JavaScript</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="javascript"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="backend segment">
-                            <div class="segment-title-wrap">
-                                <i class="fa-code-branch fa"></i>
-                                <h2>Backend Development</h2>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>PHP</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="php"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>Java</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="java"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ability-wrap">
-                                <div class="title-wrap">
-                                    <h2>Go Lang</h2>
-                                    <h3>100%</h3>
-                                </div>
-                                <div class="progress-box">
-                                    <div class="percentage">
-                                        <span id="golang"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </section>
 
                 <section class="contact_sect">
@@ -864,75 +664,7 @@
 
     <script src="https://kit.fontawesome.com/ba96d4e202.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Type Writer for Job Position
-            var typed = new Typed('#job-position', {
-                strings: ['Junior DevOps Engineer', 'Web Developer', 'Programmer','Freelancer'],
-                typeSpeed: 80,
-                backSpeed: 50,
-                startDelay: 200,
-                backDelay: 1000,
-                loop: true,
-                showCursor: false,
-            });
-        });
-        document.getElementsByClassName("container")[0].addEventListener('scroll', (c) => {
-            let progressBarStyleExist = document.querySelectorAll('.progress_bar')[0].hasAttribute('style');
-            let outerCircleStyleExist = document.querySelectorAll('.outer-circle')[0].hasAttribute('style');
-
-            if (c.target.scrollTop >= 600 && !progressBarStyleExist) {
-                incrementProgress()
-            }
-
-            if (c.target.scrollTop >= 1200 && !outerCircleStyleExist) {
-                incrementCircle()
-            }
-        })
-
-        function incrementCircle() {
-            let outerCircle = document.querySelectorAll('.outer-circle');
-
-            outerCircle.forEach((circle) => {
-                let progressValue = 0;
-                let span = circle.querySelector('span')
-                let percentageValue = span.textContent
-                let afterSubStr = percentageValue.substring(0, 2);
-
-                setInterval(() => {
-                    if (progressValue < afterSubStr) {
-                        progressValue++
-                        circle.style.background = `conic-gradient(
-                            #5e3f7b ${progressValue}%, 
-                            #fff ${progressValue}% 100%
-                        )`
-                    } else {
-                        clearInterval()
-                    }
-                }, 10)
-            })
-        }
-
-        function incrementProgress() {
-            let progressBox = document.querySelectorAll('.progress_box')
-            progressBox.forEach((box) => {
-                let progressPercentage = box.querySelector('.progress_title h3:nth-child(2)').textContent.substring(0, 2)
-                let progressBar = box.querySelector('.progress_bar')
-                let progressValue = 0;
-
-                setInterval(() => {
-                    if (progressValue < progressPercentage) {
-                        progressValue++
-                        progressBar.style.width = `${progressValue}%`
-                    } else {
-                        clearInterval()
-                    }
-                }, 15)
-            })
-        }
-
-
-    </script>
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

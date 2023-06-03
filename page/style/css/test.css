@@ -40,7 +40,10 @@ body {
 }
 
 .font-orange {
-  color: #ED7014;
+  color: #ED7014 !important;
+}
+.font-orange i {
+  color: #ED7014 !important;
 }
 
 body {

@@ -41,7 +41,10 @@ body {
 }
 
 .font-orange {
-  color: #ED7014;
+  color: #ED7014 !important;
+}
+.font-orange i {
+  color: #ED7014 !important;
 }
 
 * {
@@ -86,7 +89,10 @@ body {
 }
 
 .font-orange {
-  color: #ED7014;
+  color: #ED7014 !important;
+}
+.font-orange i {
+  color: #ED7014 !important;
 }
 
 @keyframes navColorFade {
@@ -103,6 +109,26 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes fadeToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeToLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%);
   }
 }
 .content {
@@ -122,6 +148,12 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+}
+.content .fadeToLeft {
+  animation: fadeToLeft 0.4s ease-in-out forwards;
+}
+.content .fadeToRight {
+  animation: fadeToRight 0.8s ease-in-out forwards;
 }
 .content header {
   width: 6.5%;
@@ -242,7 +274,7 @@ body {
   color: #f27a25;
 }
 .content .container .intro_sect {
-  display: none;
+  display: block;
 }
 .content .container .intro_sect .intro_sect_about p {
   margin-top: 20px;
@@ -331,6 +363,9 @@ body {
 }
 .content .container .intro_sect .services-wrap .service:nth-child(2), .content .container .intro_sect .services-wrap .service:nth-child(4) {
   padding-left: 4%;
+}
+.content .container .intro_sect .services-wrap .service:nth-child(4) > .service-title-wrap > i {
+  padding: 4%;
 }
 .content .container .intro_sect .pricing-wrap {
   display: flex;
@@ -771,9 +806,49 @@ body {
   color: #303030;
   margin: 10px 0;
 }
+.content .container .project_sect {
+  display: none;
+}
+.content .container .project_sect .construction_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .container .project_sect .construction_wrap .left,
+.content .container .project_sect .construction_wrap .right {
+  height: 100%;
+}
+.content .container .project_sect .construction_wrap .left {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .container .project_sect .construction_wrap .left img {
+  width: 100%;
+  height: 100%;
+}
+.content .container .project_sect .construction_wrap .right {
+  width: 100%;
+  height: 30%;
+}
+.content .container .project_sect .construction_wrap .right h1 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #452c63;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
 .content .container .contact_sect {
   width: 100%;
   height: 100%;
+  display: none;
 }
 .content .container .contact_sect .map_wrap {
   min-height: 50%;

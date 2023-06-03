@@ -55,8 +55,14 @@ background: linear-gradient(162deg, rgba(69,44,99,1) 0%, rgba(163,119,217,1) 50%
 }
 
 .font-orange{
-    color: $dark-orange;
+    color: $dark-orange !important;
+
+    i{
+        color: $dark-orange !important;
+    }
 }
+
+
 
 
 
