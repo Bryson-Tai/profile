@@ -1,7 +1,7 @@
 
         // Type Writer for Job Position
         document.addEventListener('DOMContentLoaded', () => {
-            var typed = new Typed('#job-position', {
+            new Typed('#job-position', {
                 strings: ['Junior DevOps Engineer', 'Web Developer', 'Programmer','Freelancer'],
                 typeSpeed: 80,
                 backSpeed: 50,
@@ -13,6 +13,7 @@
 
             //Calculate Age Dynamically
             document.getElementById('age_count').textContent = new Date().getFullYear() - 1996;
+            document.getElementById('coding_year').textContent = new Date().getFullYear() - 2019;
         });
 
         // Resume Progress Bar Animation
