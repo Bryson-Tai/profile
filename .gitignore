@@ -1,3 +1,9 @@
 vendor
 gin-bin
 gin-bin.exe
+
+.terraform
+.terraform.*
+terraform.tfstate
+terraform.tfstate.*
+~

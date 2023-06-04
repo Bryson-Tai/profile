@@ -10,7 +10,7 @@ module "k3s_instance_sg" {
   }
 
   aws_key_pair = {
-    key_name   = "wsl_pem_private"
+    key_name = "wsl_pem_private"
 
     tags = {
       system = "wsl"
