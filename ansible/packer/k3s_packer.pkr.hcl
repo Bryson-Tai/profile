@@ -19,7 +19,6 @@ build {
   provisioner "ansible" {
     playbook_file = "../playbook/k3s-playbook.yaml"
     use_proxy     = false
-    extra_arguments = [ "-vvvv" ]
   }
 
 }

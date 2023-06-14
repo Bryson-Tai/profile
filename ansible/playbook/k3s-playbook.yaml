@@ -17,10 +17,7 @@
       name: docker
       state: present
   - name: Add Docker to system group
-    user:
-      name: {{ ansible_user_id }}
-      group: docker
-      append: yes
+    shell: "usermod -aG docker ${USER}"
   - name: Install K3S
     shell: "curl -sfL https://get.k3s.io | sh -"
   - name: Start and enable K3S
@@ -28,4 +25,10 @@
       name: k3s
       state: restarted
       enabled: yes
+  - name: Copy K3S config to ~/.kube
+    copy:
+      src: /etc/rancher/k3s/k3s.yaml
+      dest: ~/.kube/k3s_kubeconfig
+      remote_src: yes
+      mode: '0644'
   
