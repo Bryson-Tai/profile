@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  - name: Update Package and 
+    shell: "apt update -y"
+  - name: Install K3S
+    shell: "curl -sfL https://get.k3s.io | sh -"
+  - name: Start and enable K3S
+    shell: "systemctl start k3s && systemctl enable k3s"

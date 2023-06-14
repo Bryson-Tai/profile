@@ -2,24 +2,24 @@ data "aws_vpc" "vpc" {
   id = var.vpc_id
 }
 
+data "aws_ami" "k3s_ami" {
+  tags = var.k3s_ami
+}
+
+data "aws_key_pair" "aws_wsl_key_pair" {
+  tags = var.aws_wsl_key_pair
+}
+
 resource "aws_instance" "free_tier_instance" {
   ami           = var.aws_instance.ami
   instance_type = var.aws_instance.instance_type
-  key_name      = aws_key_pair.wsl_key_pair.key_name
+  key_name      = data.aws_key_pair.aws_wsl_key_pair.key_name
 
   #? Use this attribute to attach the security group to instance if the security groups is under the VPC
   vpc_security_group_ids = [aws_security_group.sec_group.id]
-
   tags = var.aws_instance.tags
 
   depends_on = [aws_security_group.sec_group]
-
-  user_data = <<-EOF
-    sudo apt update -y
-    curl -sfL https://get.k3s.io | sh -
-    systemctl start k3s
-    systemctl enable k3s
-  EOF
 }
 
 # resource "aws_vpc" "vpc_test" {
@@ -97,23 +97,23 @@ resource "aws_security_group_rule" "outbound" {
   security_group_id = aws_security_group.sec_group.id
 }
 
-resource "aws_key_pair" "wsl_key_pair" {
-  key_name   = var.aws_key_pair.key_name
-  public_key = tls_private_key.pem_key.public_key_openssh
+# resource "aws_key_pair" "wsl_key_pair" {
+#   key_name   = var.aws_key_pair.key_name
+#   public_key = tls_private_key.pem_key.public_key_openssh
 
-  tags = var.aws_key_pair.tags
-}
+#   tags = var.aws_key_pair.tags
+# }
 
 #? Create private and public key for SSH to AWS Instance
-resource "tls_private_key" "pem_key" {
-  algorithm = "RSA"
-  rsa_bits  = 4096
-}
+# resource "tls_private_key" "pem_key" {
+#   algorithm = "RSA"
+#   rsa_bits  = 4096
+# }
 
 #? Create local file after generate PEM key for SSH to AWS Intance
-resource "local_file" "pem_private" {
-  filename             = "wsl_pem_private.pem"
-  content              = tls_private_key.pem_key.private_key_openssh
-  file_permission      = 0400
-  directory_permission = 0400
-}
+# resource "local_file" "pem_private" {
+#   filename             = "~/.ssh/wsl_pem_private.pem"
+#   content              = tls_private_key.pem_key.private_key_openssh
+#   file_permission      = 0400
+#   directory_permission = 0400
+# }

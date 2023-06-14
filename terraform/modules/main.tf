@@ -9,11 +9,23 @@ module "k3s_instance_sg" {
     }
   }
 
-  aws_key_pair = {
-    key_name = "wsl_pem_private"
-
-    tags = {
-      system = "wsl"
-    }
+  k3s_ami = {
+    content = "k3s"
+    owner   = "bryson"
+    usage   = "profile"
   }
+
+  aws_wsl_key_pair = {
+    owner = "bryson"
+    location = "home"
+  }
+  
+  # aws_key_pair = {
+  #   key_name = "wsl_pem_private"
+
+  #   tags = {
+  #     system = "wsl"
+  #   }
+  # }
+
 }
