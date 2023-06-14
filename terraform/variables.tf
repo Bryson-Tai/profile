@@ -1,6 +1,6 @@
 variable "aws_instance" {
   type = object({
-    ami           = string
+    # ami           = string
     instance_type = string
     tags          = map(string)
   })
@@ -19,11 +19,11 @@ variable "vpc_id" {
 }
 
 variable "aws_wsl_key_pair" {
-  type = map(string)
+  type        = map(string)
   description = "Get existing AWS Key Pair with tags"
 }
 
 variable "k3s_ami" {
-  type = map(string)
+  type        = map(string)
   description = "Get k3s AMI with tags"
 }

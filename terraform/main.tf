@@ -3,21 +3,41 @@ data "aws_vpc" "vpc" {
 }
 
 data "aws_ami" "k3s_ami" {
-  tags = var.k3s_ami
+  filter {
+    name   = "tag:content"
+    values = ["k3s"]
+  }
+
+  filter {
+    name   = "tag:owner"
+    values = ["bryson"]
+  }
+
+  filter {
+    name   = "tag:usage"
+    values = ["profile"]
+  }
 }
 
 data "aws_key_pair" "aws_wsl_key_pair" {
-  tags = var.aws_wsl_key_pair
+  filter {
+    name   = "tag:owner"
+    values = ["bryson"]
+  }
+  filter {
+    name   = "tag:location"
+    values = ["home"]
+  } 
 }
 
 resource "aws_instance" "free_tier_instance" {
-  ami           = var.aws_instance.ami
+  ami           = data.aws_ami.k3s_ami.id
   instance_type = var.aws_instance.instance_type
   key_name      = data.aws_key_pair.aws_wsl_key_pair.key_name
 
   #? Use this attribute to attach the security group to instance if the security groups is under the VPC
   vpc_security_group_ids = [aws_security_group.sec_group.id]
-  tags = var.aws_instance.tags
+  tags                   = var.aws_instance.tags
 
   depends_on = [aws_security_group.sec_group]
 }

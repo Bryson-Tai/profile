@@ -3,9 +3,29 @@
 - hosts: all
   become: true
   tasks:
-  - name: Update Package and 
-    shell: "apt update -y"
+  - name: Install Docker
+    apt:
+      name: docker.io
+      update_cache: yes
+  - name: Enable Docker service
+    service:
+      name: docker
+      state: restarted
+      enabled: yes
+  - name: Create Docker group
+    group:
+      name: docker
+      state: present
+  - name: Add Docker to system group
+    user:
+      name: {{ ansible_user_id }}
+      group: docker
+      append: yes
   - name: Install K3S
     shell: "curl -sfL https://get.k3s.io | sh -"
   - name: Start and enable K3S
-    shell: "systemctl start k3s && systemctl enable k3s"
+    service:
+      name: k3s
+      state: restarted
+      enabled: yes
+  
