@@ -2,6 +2,10 @@
 
 - hosts: all
   become: true
+  gather_facts: no
+  vars:
+    kubePath: /home/ubuntu/.kube
+    k3sURL: https://get.k3s.io
   tasks:
   - name: Install Docker
     apt:
@@ -17,18 +21,23 @@
       name: docker
       state: present
   - name: Add Docker to system group
-    shell: "usermod -aG docker ${USER}"
+    shell: "usermod -aG docker ubuntu"
   - name: Install K3S
-    shell: "curl -sfL https://get.k3s.io | sh -"
+    shell: "curl -sfL {{ k3sURL }} | sh -"
   - name: Start and enable K3S
     service:
       name: k3s
       state: restarted
       enabled: yes
-  - name: Copy K3S config to ~/.kube
+  - name: Create .kube directory
+    file:
+      path: "{{ kubePath }}"
+      state: directory
+      mode: '0555'
+  - name: Copy K3S config to /home/ubuntu/.kube
     copy:
       src: /etc/rancher/k3s/k3s.yaml
-      dest: ~/.kube/k3s_kubeconfig
+      dest: "{{ kubePath }}/k3s_kubeconfig.yaml"
       remote_src: yes
       mode: '0644'
   
