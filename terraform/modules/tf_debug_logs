@@ -22520,3 +22520,374 @@
     <return>true</return>
 </RevokeSecurityGroupIngressResponse>
 " @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 aws.service=EC2 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.status_code=200 http.duration=208 http.response.header.x_amzn_requestid=ccf5cf98-a269-4e71-8637-aa7f78e01af9 tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2b4debeb-8a65-6989-ba48-9782213a08c2 tf_resource_type=aws_security_group_rule aws.operation=RevokeSecurityGroupIngress aws.sdk=aws-sdk-go http.response.header.cache_control="no-cache, no-store" http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.date="Thu, 15 Jun 2023 16:41:38 GMT" http.response.header.server=AmazonEC2 http.response_content_length=253 tf_rpc=ApplyResourceChange timestamp=2023-06-16T00:41:39.666+0800
+2023-06-16T00:41:48.047+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 aws.service=EC2 http.url=https://ec2.ap-southeast-1.amazonaws.com/ http.method=POST http.request.body="Action=DescribeInstances&InstanceId.1=i-0ef214a12e6f17fbc&Version=2016-11-15
+" http.request.header.x_amz_date=20230615T164148Z http.request_content_length=76 net.peer.name=ec2.ap-southeast-1.amazonaws.com @module=aws aws.operation=DescribeInstances http.flavor=1.1 tf_provider_addr=registry.terraform.io/hashicorp/aws http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" tf_mux_provider=*schema.GRPCProviderServer tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 tf_resource_type=aws_instance aws.sdk=aws-sdk-go tf_rpc=ApplyResourceChange aws.region=ap-southeast-1 http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" timestamp=2023-06-16T00:41:48.046+0800
+2023-06-16T00:41:48.177+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 @module=aws aws.service=EC2 http.response.header.x_amzn_requestid=b7f0e066-80f6-4f98-93b2-4393d2374254 http.status_code=200 tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ApplyResourceChange http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.server=AmazonEC2 http.response.header.vary=accept-encoding tf_resource_type=aws_instance aws.region=ap-southeast-1 aws.sdk=aws-sdk-go aws.operation=DescribeInstances http.duration=129 http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>b7f0e066-80f6-4f98-93b2-4393d2374254</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-005d4e9408dbf4bb4</reservationId>
+            <ownerId>604250820392</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-0ef214a12e6f17fbc</instanceId>
+                    <imageId>ami-04cbc616356ca9aaf</imageId>
+                    <instanceState>
+                        <code>32</code>
+                        <name>shutting-down</name>
+                    </instanceState>
+                    <privateDnsName>ip-172-31-23-90.ap-southeast-1.compute.internal</privateDnsName>
+                    <dnsName>ec2-54-151-253-144.ap-southeast-1.compute.amazonaws.com</dnsName>
+                    <reason>User initiated (2023-06-15 16:41:37 GMT)</reason>
+                    <keyName>wsl</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2023-06-15T16:38:42.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>ap-southeast-1b</availabilityZone>
+                        <groupName/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                    <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                    <privateIpAddress>172.31.23.90</privateIpAddress>
+                    <ipAddress>54.151.253.144</ipAddress>
+                    <sourceDestCheck>true</sourceDestCheck>
+                    <groupSet>
+                        <item>
+                            <groupId>sg-0993f5263dfdd1f31</groupId>
+                            <groupName>Security Group</groupName>
+                        </item>
+                    </groupSet>
+                    <stateReason>
+                        <code>Client.UserInitiatedShutdown</code>
+                        <message>Client.UserInitiatedShutdown: User initiated shutdown</message>
+                    </stateReason>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping>
+                        <item>
+                            <deviceName>/dev/sda1</deviceName>
+                            <ebs>
+                                <volumeId>vol-0577f6ce25b94eb33</volumeId>
+                                <status>attached</status>
+                                <attachTime>2023-06-15T16:38:42.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                            </ebs>
+                        </item>
+                    </blockDeviceMapping>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken>terraform-20230615163841494700000001</clientToken>
+                    <tagSet>
+                        <item>
+                            <key>Name</key>
+                            <value>k3s_instance</value>
+                        </item>
+                    </tagSet>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet>
+                        <item>
+                            <networkInterfaceId>eni-0c30157bd3860346a</networkInterfaceId>
+                            <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                            <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                            <description/>
+                            <ownerId>604250820392</ownerId>
+                            <status>in-use</status>
+                            <macAddress>02:c9:aa:50:e6:9e</macAddress>
+                            <privateIpAddress>172.31.23.90</privateIpAddress>
+[truncated...]" http.response.header.cache_control="no-cache, no-store" http.response.header.date="Thu, 15 Jun 2023 16:41:47 GMT" @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 timestamp=2023-06-16T00:41:48.176+0800
+2023-06-16T00:41:51.179+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 aws.operation=DescribeInstances aws.region=ap-southeast-1 aws.sdk=aws-sdk-go tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 @module=aws aws.service=EC2 http.request.header.x_amz_date=20230615T164151Z http.url=https://ec2.ap-southeast-1.amazonaws.com/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" net.peer.name=ec2.ap-southeast-1.amazonaws.com http.flavor=1.1 http.method=POST http.request.body="Action=DescribeInstances&InstanceId.1=i-0ef214a12e6f17fbc&Version=2016-11-15
+" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" http.request_content_length=76 tf_resource_type=aws_instance tf_rpc=ApplyResourceChange timestamp=2023-06-16T00:41:51.179+0800
+2023-06-16T00:41:51.233+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: http.duration=53 http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>30013751-dfde-4fad-a495-6f23d7d374a4</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-005d4e9408dbf4bb4</reservationId>
+            <ownerId>604250820392</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-0ef214a12e6f17fbc</instanceId>
+                    <imageId>ami-04cbc616356ca9aaf</imageId>
+                    <instanceState>
+                        <code>32</code>
+                        <name>shutting-down</name>
+                    </instanceState>
+                    <privateDnsName>ip-172-31-23-90.ap-southeast-1.compute.internal</privateDnsName>
+                    <dnsName>ec2-54-151-253-144.ap-southeast-1.compute.amazonaws.com</dnsName>
+                    <reason>User initiated (2023-06-15 16:41:37 GMT)</reason>
+                    <keyName>wsl</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2023-06-15T16:38:42.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>ap-southeast-1b</availabilityZone>
+                        <groupName/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                    <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                    <privateIpAddress>172.31.23.90</privateIpAddress>
+                    <ipAddress>54.151.253.144</ipAddress>
+                    <sourceDestCheck>true</sourceDestCheck>
+                    <groupSet>
+                        <item>
+                            <groupId>sg-0993f5263dfdd1f31</groupId>
+                            <groupName>Security Group</groupName>
+                        </item>
+                    </groupSet>
+                    <stateReason>
+                        <code>Client.UserInitiatedShutdown</code>
+                        <message>Client.UserInitiatedShutdown: User initiated shutdown</message>
+                    </stateReason>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping>
+                        <item>
+                            <deviceName>/dev/sda1</deviceName>
+                            <ebs>
+                                <volumeId>vol-0577f6ce25b94eb33</volumeId>
+                                <status>attached</status>
+                                <attachTime>2023-06-15T16:38:42.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                            </ebs>
+                        </item>
+                    </blockDeviceMapping>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken>terraform-20230615163841494700000001</clientToken>
+                    <tagSet>
+                        <item>
+                            <key>Name</key>
+                            <value>k3s_instance</value>
+                        </item>
+                    </tagSet>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet>
+                        <item>
+                            <networkInterfaceId>eni-0c30157bd3860346a</networkInterfaceId>
+                            <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                            <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                            <description/>
+                            <ownerId>604250820392</ownerId>
+                            <status>in-use</status>
+                            <macAddress>02:c9:aa:50:e6:9e</macAddress>
+                            <privateIpAddress>172.31.23.90</privateIpAddress>
+[truncated...]" http.response.header.cache_control="no-cache, no-store" http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.server=AmazonEC2 http.status_code=200 tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 aws.sdk=aws-sdk-go aws.service=EC2 tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_instance tf_rpc=ApplyResourceChange http.response.header.vary=accept-encoding http.response.header.x_amzn_requestid=30013751-dfde-4fad-a495-6f23d7d374a4 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 @module=aws aws.operation=DescribeInstances aws.region=ap-southeast-1 http.response.header.date="Thu, 15 Jun 2023 16:41:50 GMT" http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" timestamp=2023-06-16T00:41:51.233+0800
+2023-06-16T00:41:57.238+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: http.request.body="Action=DescribeInstances&InstanceId.1=i-0ef214a12e6f17fbc&Version=2016-11-15
+" http.url=https://ec2.ap-southeast-1.amazonaws.com/ net.peer.name=ec2.ap-southeast-1.amazonaws.com tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 aws.operation=DescribeInstances aws.sdk=aws-sdk-go @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" http.request_content_length=76 aws.service=EC2 http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20230615T164157Z aws.region=ap-southeast-1 http.flavor=1.1 http.method=POST http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" tf_mux_provider=*schema.GRPCProviderServer @module=aws tf_resource_type=aws_instance tf_rpc=ApplyResourceChange timestamp=2023-06-16T00:41:57.238+0800
+2023-06-16T00:41:57.305+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: http.response.header.server=AmazonEC2 http.response.header.vary=accept-encoding tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_instance aws.operation=DescribeInstances aws.service=EC2 http.duration=65 http.response.header.content_type=text/xml;charset=UTF-8 tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 tf_rpc=ApplyResourceChange aws.sdk=aws-sdk-go http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>5e8c9b01-c00c-4f0a-8d58-b4371a8b241c</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-005d4e9408dbf4bb4</reservationId>
+            <ownerId>604250820392</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-0ef214a12e6f17fbc</instanceId>
+                    <imageId>ami-04cbc616356ca9aaf</imageId>
+                    <instanceState>
+                        <code>32</code>
+                        <name>shutting-down</name>
+                    </instanceState>
+                    <privateDnsName>ip-172-31-23-90.ap-southeast-1.compute.internal</privateDnsName>
+                    <dnsName>ec2-54-151-253-144.ap-southeast-1.compute.amazonaws.com</dnsName>
+                    <reason>User initiated (2023-06-15 16:41:37 GMT)</reason>
+                    <keyName>wsl</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2023-06-15T16:38:42.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>ap-southeast-1b</availabilityZone>
+                        <groupName/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                    <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                    <privateIpAddress>172.31.23.90</privateIpAddress>
+                    <ipAddress>54.151.253.144</ipAddress>
+                    <sourceDestCheck>true</sourceDestCheck>
+                    <groupSet>
+                        <item>
+                            <groupId>sg-0993f5263dfdd1f31</groupId>
+                            <groupName>Security Group</groupName>
+                        </item>
+                    </groupSet>
+                    <stateReason>
+                        <code>Client.UserInitiatedShutdown</code>
+                        <message>Client.UserInitiatedShutdown: User initiated shutdown</message>
+                    </stateReason>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping>
+                        <item>
+                            <deviceName>/dev/sda1</deviceName>
+                            <ebs>
+                                <volumeId>vol-0577f6ce25b94eb33</volumeId>
+                                <status>attached</status>
+                                <attachTime>2023-06-15T16:38:42.000Z</attachTime>
+                                <deleteOnTermination>true</deleteOnTermination>
+                            </ebs>
+                        </item>
+                    </blockDeviceMapping>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken>terraform-20230615163841494700000001</clientToken>
+                    <tagSet>
+                        <item>
+                            <key>Name</key>
+                            <value>k3s_instance</value>
+                        </item>
+                    </tagSet>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet>
+                        <item>
+                            <networkInterfaceId>eni-0c30157bd3860346a</networkInterfaceId>
+                            <subnetId>subnet-0abd528ea6ad71ed9</subnetId>
+                            <vpcId>vpc-0e27d2347fc7f31c2</vpcId>
+                            <description/>
+                            <ownerId>604250820392</ownerId>
+                            <status>in-use</status>
+                            <macAddress>02:c9:aa:50:e6:9e</macAddress>
+                            <privateIpAddress>172.31.23.90</privateIpAddress>
+[truncated...]" http.response.header.cache_control="no-cache, no-store" http.response.header.date="Thu, 15 Jun 2023 16:41:56 GMT" @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 @module=aws aws.region=ap-southeast-1 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.x_amzn_requestid=5e8c9b01-c00c-4f0a-8d58-b4371a8b241c http.status_code=200 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-06-16T00:41:57.304+0800
+2023-06-16T00:42:07.315+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 aws.sdk=aws-sdk-go http.flavor=1.1 http.request.header.x_amz_date=20230615T164207Z aws.operation=DescribeInstances http.method=POST http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" tf_rpc=ApplyResourceChange aws.region=ap-southeast-1 aws.service=EC2 http.request.body="Action=DescribeInstances&InstanceId.1=i-0ef214a12e6f17fbc&Version=2016-11-15
+" http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" http.request_content_length=76 http.url=https://ec2.ap-southeast-1.amazonaws.com/ tf_resource_type=aws_instance @module=aws http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" net.peer.name=ec2.ap-southeast-1.amazonaws.com tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 timestamp=2023-06-16T00:42:07.314+0800
+2023-06-16T00:42:07.387+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: aws.operation=DescribeInstances aws.region=ap-southeast-1 http.response.header.date="Thu, 15 Jun 2023 16:42:06 GMT" http.response.header.server=AmazonEC2 tf_resource_type=aws_instance @module=aws aws.service=EC2 http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>084812e0-e672-4858-93fd-602f950f0fa8</requestId>
+    <reservationSet>
+        <item>
+            <reservationId>r-005d4e9408dbf4bb4</reservationId>
+            <ownerId>604250820392</ownerId>
+            <groupSet/>
+            <instancesSet>
+                <item>
+                    <instanceId>i-0ef214a12e6f17fbc</instanceId>
+                    <imageId>ami-04cbc616356ca9aaf</imageId>
+                    <instanceState>
+                        <code>48</code>
+                        <name>terminated</name>
+                    </instanceState>
+                    <privateDnsName/>
+                    <dnsName/>
+                    <reason>User initiated (2023-06-15 16:41:37 GMT)</reason>
+                    <keyName>wsl</keyName>
+                    <amiLaunchIndex>0</amiLaunchIndex>
+                    <productCodes/>
+                    <instanceType>t2.micro</instanceType>
+                    <launchTime>2023-06-15T16:38:42.000Z</launchTime>
+                    <placement>
+                        <availabilityZone>ap-southeast-1b</availabilityZone>
+                        <groupName/>
+                        <tenancy>default</tenancy>
+                    </placement>
+                    <monitoring>
+                        <state>disabled</state>
+                    </monitoring>
+                    <groupSet/>
+                    <stateReason>
+                        <code>Client.UserInitiatedShutdown</code>
+                        <message>Client.UserInitiatedShutdown: User initiated shutdown</message>
+                    </stateReason>
+                    <architecture>x86_64</architecture>
+                    <rootDeviceType>ebs</rootDeviceType>
+                    <rootDeviceName>/dev/sda1</rootDeviceName>
+                    <blockDeviceMapping/>
+                    <virtualizationType>hvm</virtualizationType>
+                    <clientToken>terraform-20230615163841494700000001</clientToken>
+                    <tagSet>
+                        <item>
+                            <key>Name</key>
+                            <value>k3s_instance</value>
+                        </item>
+                    </tagSet>
+                    <hypervisor>xen</hypervisor>
+                    <networkInterfaceSet/>
+                    <ebsOptimized>false</ebsOptimized>
+                    <enaSupport>true</enaSupport>
+                    <cpuOptions>
+                        <coreCount>1</coreCount>
+                        <threadsPerCore>1</threadsPerCore>
+                    </cpuOptions>
+                    <capacityReservationSpecification>
+                        <capacityReservationPreference>open</capacityReservationPreference>
+                    </capacityReservationSpecification>
+                    <hibernationOptions>
+                        <configured>false</configured>
+                    </hibernationOptions>
+                    <enclaveOptions>
+                        <enabled>false</enabled>
+                    </enclaveOptions>
+                    <metadataOptions>
+                        <state>pending</state>
+                        <httpTokens>optional</httpTokens>
+                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>
+                        <httpEndpoint>enabled</httpEndpoint>
+                        <httpProtocolIpv4>enabled</httpProtocolIpv4>
+                        <httpProtocolIpv6>disabled</httpProtocolIpv6>
+                        <instanceMetadataTags>disabled</instanceMetadataTags>
+                    </metadataOptions>
+                    <maintenanceOptions>
+                        <autoRecovery>default</autoRecovery>
+                    </maintenanceOptions>
+                    <currentInstanceBootMode>legacy-bios</currentInstanceBootMode>
+                    <platformDetails>Linux/UNIX</platformDetails>
+                    <usageOperation>RunInstances</usageOperation>
+                    <usageOperationUpdateTime>2023-06-15T16:38:42.000Z</usageOperationUpdateTime>
+[truncated...]" tf_mux_provider=*schema.GRPCProviderServer tf_req_id=5e2e2b8f-d3cb-c74c-81f1-780bbbc9c164 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 http.response.header.vary=accept-encoding tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ApplyResourceChange aws.sdk=aws-sdk-go http.duration=72 http.response.header.cache_control="no-cache, no-store" http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.x_amzn_requestid=084812e0-e672-4858-93fd-602f950f0fa8 http.status_code=200 timestamp=2023-06-16T00:42:07.387+0800
+2023-06-16T00:42:07.401+0800 [INFO]  Starting apply for module.k3s_instance_sg.aws_security_group.sec_group
+2023-06-16T00:42:07.401+0800 [DEBUG] module.k3s_instance_sg.aws_security_group.sec_group: applying the planned Delete change
+2023-06-16T00:42:07.404+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: http.url=https://ec2.ap-southeast-1.amazonaws.com/ tf_resource_type=aws_security_group aws.region=ap-southeast-1 http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" aws.sdk=aws-sdk-go http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 @module=aws aws.operation=DescribeNetworkInterfaces aws.service=EC2 http.method=POST http.request.body="Action=DescribeNetworkInterfaces&Filter.1.Name=description&Filter.1.Value.1=AWS+Lambda+VPC+ENI%2A&Filter.2.Name=group-id&Filter.2.Value.1=sg-0993f5263dfdd1f31&Version=2016-11-15
+" http.request_content_length=177 net.peer.name=ec2.ap-southeast-1.amazonaws.com @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 tf_provider_addr=registry.terraform.io/hashicorp/aws http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20230615T164207Z tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ApplyResourceChange http.flavor=1.1 timestamp=2023-06-16T00:42:07.404+0800
+2023-06-16T00:42:07.447+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: aws.operation=DescribeNetworkInterfaces http.duration=43 http.response.header.date="Thu, 15 Jun 2023 16:42:06 GMT" http.response.header.server=AmazonEC2 http.response_content_length=251 tf_mux_provider=*schema.GRPCProviderServer tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 tf_resource_type=aws_security_group tf_rpc=ApplyResourceChange aws.service=EC2 aws.region=ap-southeast-1 http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.x_amzn_requestid=71d2e4b5-a017-49f9-89c5-51f3953632b1 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 @module=aws aws.sdk=aws-sdk-go http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeNetworkInterfacesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>71d2e4b5-a017-49f9-89c5-51f3953632b1</requestId>
+    <networkInterfaceSet/>
+</DescribeNetworkInterfacesResponse>
+" http.response.header.cache_control="no-cache, no-store" http.status_code=200 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-06-16T00:42:07.447+0800
+2023-06-16T00:42:07.447+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: aws.sdk=aws-sdk-go http.url=https://ec2.ap-southeast-1.amazonaws.com/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20230615T164207Z @module=aws aws.region=ap-southeast-1 http.flavor=1.1 http.method=POST http.request.body="Action=DescribeNetworkInterfaces&Filter.1.Name=group-id&Filter.1.Value.1=sg-0993f5263dfdd1f31&Version=2016-11-15
+" @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 aws.operation=DescribeNetworkInterfaces http.request_content_length=112 tf_resource_type=aws_security_group tf_rpc=ApplyResourceChange aws.service=EC2 http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" net.peer.name=ec2.ap-southeast-1.amazonaws.com tf_mux_provider=*schema.GRPCProviderServer timestamp=2023-06-16T00:42:07.447+0800
+2023-06-16T00:42:07.484+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: @module=aws http.response.header.content_type=text/xml;charset=UTF-8 tf_rpc=ApplyResourceChange aws.operation=DescribeNetworkInterfaces aws.service=EC2 http.duration=36 http.status_code=200 tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_security_group aws.sdk=aws-sdk-go http.response.header.server=AmazonEC2 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.x_amzn_requestid=79f94c37-1ff4-436e-bfd4-e8ae5b33b313 http.response_content_length=251 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 aws.region=ap-southeast-1 http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DescribeNetworkInterfacesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>79f94c37-1ff4-436e-bfd4-e8ae5b33b313</requestId>
+    <networkInterfaceSet/>
+</DescribeNetworkInterfacesResponse>
+" http.response.header.cache_control="no-cache, no-store" http.response.header.date="Thu, 15 Jun 2023 16:42:06 GMT" tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 timestamp=2023-06-16T00:42:07.484+0800
+2023-06-16T00:42:07.485+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: [DEBUG] Deleting Security Group: sg-0993f5263dfdd1f31
+2023-06-16T00:42:07.485+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: [DEBUG] Waiting for state to become: [success]
+2023-06-16T00:42:07.494+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: @module=aws aws.service=EC2 http.flavor=1.1 http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" http.request.header.x_amz_date=20230615T164207Z http.request_content_length=74 http.url=https://ec2.ap-southeast-1.amazonaws.com/ tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 tf_rpc=ApplyResourceChange aws.operation=DeleteSecurityGroup aws.region=ap-southeast-1 aws.sdk=aws-sdk-go http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" net.peer.name=ec2.ap-southeast-1.amazonaws.com tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_security_group @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 tf_provider_addr=registry.terraform.io/hashicorp/aws http.method=POST http.request.body="Action=DeleteSecurityGroup&GroupId=sg-0993f5263dfdd1f31&Version=2016-11-15
+" http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" timestamp=2023-06-16T00:42:07.494+0800
+2023-06-16T00:42:07.820+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: http.response.header.x_amzn_requestid=18c85939-6d67-45b6-a1b6-ae1bd132cb5d http.status_code=200 tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 tf_resource_type=aws_security_group @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 aws.service=EC2 http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" tf_rpc=ApplyResourceChange http.response.header.cache_control="no-cache, no-store" http.response.header.server=AmazonEC2 tf_provider_addr=registry.terraform.io/hashicorp/aws aws.region=ap-southeast-1 http.response.header.date="Thu, 15 Jun 2023 16:42:06 GMT" http.response_content_length=239 http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<DeleteSecurityGroupResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+    <requestId>18c85939-6d67-45b6-a1b6-ae1bd132cb5d</requestId>
+    <return>true</return>
+</DeleteSecurityGroupResponse>
+" http.response.header.content_type=text/xml;charset=UTF-8 tf_mux_provider=*schema.GRPCProviderServer @module=aws aws.operation=DeleteSecurityGroup aws.sdk=aws-sdk-go http.duration=326 timestamp=2023-06-16T00:42:07.820+0800
+2023-06-16T00:42:07.821+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: [DEBUG] Waiting for state to become: [success]
+2023-06-16T00:42:07.822+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Request Sent: aws.region=ap-southeast-1 http.request_content_length=79 net.peer.name=ec2.ap-southeast-1.amazonaws.com tf_provider_addr=registry.terraform.io/hashicorp/aws aws.operation=DescribeSecurityGroups http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************G2YU/20230615/ap-southeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.x_amz_date=20230615T164207Z http.url=https://ec2.ap-southeast-1.amazonaws.com/ aws.sdk=aws-sdk-go http.flavor=1.1 http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.4.6 (+https://www.terraform.io) terraform-provider-aws/5.1.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.273 (go1.19.8; linux; amd64)" tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_security_group @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:96 @module=aws http.method=POST http.request.body="Action=DescribeSecurityGroups&GroupId.1=sg-0993f5263dfdd1f31&Version=2016-11-15
+" http.request.header.content_type="application/x-www-form-urlencoded; charset=utf-8" tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 tf_rpc=ApplyResourceChange aws.service=EC2 timestamp=2023-06-16T00:42:07.821+0800
+2023-06-16T00:42:08.026+0800 [DEBUG] provider.terraform-provider-aws_v5.1.0_x5: HTTP Response Received: aws.operation=DescribeSecurityGroups aws.region=ap-southeast-1 aws.sdk=aws-sdk-go http.duration=204 http.status_code=400 @caller=github.com/hashicorp/aws-sdk-go-base/v2/awsv1shim/v2@v2.0.0-beta.29/logger.go:144 aws.service=EC2 http.response.header.date="Thu, 15 Jun 2023 16:42:06 GMT" http.response.header.strict_transport_security="max-age=31536000; includeSubDomains" http.response.header.vary=accept-encoding tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws http.response.header.cache_control="no-cache, no-store" http.response.body="<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>InvalidGroup.NotFound</Code><Message>The security group 'sg-0993f5263dfdd1f31' does not exist</Message></Error></Errors><RequestID>a303ad15-d2dc-4ddb-a129-ae0afdf37666</RequestID></Response>
+" http.response.header.content_type=text/xml;charset=UTF-8 http.response.header.server=AmazonEC2 http.response.header.x_amzn_requestid=a303ad15-d2dc-4ddb-a129-ae0afdf37666 tf_req_id=9f831000-49c4-77c2-615b-7a5931936c58 tf_resource_type=aws_security_group @module=aws tf_rpc=ApplyResourceChange timestamp=2023-06-16T00:42:08.026+0800
+2023-06-16T00:42:08.047+0800 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-06-16T00:42:08.058+0800 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/5.1.0/linux_amd64/terraform-provider-aws_v5.1.0_x5 pid=25276
+2023-06-16T00:42:08.058+0800 [DEBUG] provider: plugin exited
