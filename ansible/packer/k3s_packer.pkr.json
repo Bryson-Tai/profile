@@ -2,14 +2,14 @@
     "builders": [
       {
         "type": "amazon-ebs",
-        "ami_name": "k3s-instance",
+        "ami_name": "docker-ready-ubuntu",
         "instance_type": "t2.micro",
         "source_ami": "ami-0df7a207adb9748c7",
         "ssh_username": "ubuntu",
         "ssh_keypair_name": "wsl",
         "ssh_private_key_file": "~/.ssh/aws_wsl.pem",
         "tags": {
-          "content": "k3s",
+          "content": "docker",
           "owner": "bryson",
           "usage": "profile"
         }
@@ -18,9 +18,8 @@
     "provisioners": [
       {
        "type": "ansible",
-       "playbook_file": "../playbook/k3s-playbook.yaml",
-       "use_proxy": false,
-       "extra_arguments": [ "-vvvv" ]
+       "playbook_file": "../playbook/docker_install.yaml",
+       "use_proxy": false
       }
     ]
 }

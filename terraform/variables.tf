@@ -23,7 +23,7 @@ variable "aws_wsl_key_pair" {
   description = "Get existing AWS Key Pair with tags"
 }
 
-variable "k3s_ami" {
+variable "docker_ami" {
   type        = map(string)
   description = "Get k3s AMI with tags"
 }

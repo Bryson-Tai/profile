@@ -3,31 +3,25 @@ data "aws_vpc" "vpc" {
 }
 
 data "aws_ami" "k3s_ami" {
-  filter {
-    name   = "tag:content"
-    values = ["k3s"]
-  }
+  dynamic "filter" {
+    for_each = { for key, value in var.docker_ami : key => value }
 
-  filter {
-    name   = "tag:owner"
-    values = ["bryson"]
-  }
-
-  filter {
-    name   = "tag:usage"
-    values = ["profile"]
+    content {
+      name = filter.key
+      values = [filter.value]
+    }
   }
 }
 
 data "aws_key_pair" "aws_wsl_key_pair" {
-  filter {
-    name   = "tag:owner"
-    values = ["bryson"]
+  dynamic "filter" {
+    for_each = { for key, value in var.aws_wsl_key_pair : key => value }
+
+    content {
+      name = filter.key
+      values = [filter.value]
+    }
   }
-  filter {
-    name   = "tag:location"
-    values = ["home"]
-  } 
 }
 
 resource "aws_instance" "free_tier_instance" {
@@ -39,8 +33,81 @@ resource "aws_instance" "free_tier_instance" {
   vpc_security_group_ids = [aws_security_group.sec_group.id]
   tags                   = var.aws_instance.tags
 
+  user_data = file("./install_k3s.sh")
+
   depends_on = [aws_security_group.sec_group]
 }
+
+resource "null_resource" "download_config" {
+  triggers = {
+    instance_dns = aws_instance.free_tier_instance.public_dns
+  }
+
+  provisioner "local-exec" {
+    command = "./k3s_config.sh ${aws_instance.free_tier_instance.public_dns} ${aws_instance.free_tier_instance.public_ip}"
+  }
+
+  depends_on = [ aws_instance.free_tier_instance ]
+}
+
+resource "aws_security_group" "sec_group" {
+  name        = "Security Group"
+  description = "Allow inbound and outbound traffic"
+  vpc_id      = data.aws_vpc.vpc.id
+
+  tags = {
+    Name = "allow_ssh"
+  }
+}
+
+#? Security Group Rule for SSH and Ping
+resource "aws_security_group_rule" "ssh" {
+  type              = "ingress"
+  to_port           = 22
+  from_port         = 22
+  protocol          = "TCP"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.sec_group.id
+}
+
+resource "aws_security_group_rule" "tcp" {
+  type              = "ingress"
+  to_port           = 80
+  from_port         = 80
+  protocol          = "TCP"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.sec_group.id
+}
+
+resource "aws_security_group_rule" "k3s_API" {
+  type              = "ingress"
+  to_port           = 6443
+  from_port         = 6443
+  protocol          = "TCP"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.sec_group.id
+}
+
+resource "aws_security_group_rule" "K3s_metric" {
+  type              = "ingress"
+  to_port           = 10250
+  from_port         = 10250
+  protocol          = "TCP"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.sec_group.id
+}
+
+resource "aws_security_group_rule" "outbound" {
+  type              = "egress"
+  from_port         = 0
+  to_port           = 0
+  protocol          = "-1"
+  cidr_blocks       = ["0.0.0.0/0"]
+  ipv6_cidr_blocks  = ["::/0"]
+  security_group_id = aws_security_group.sec_group.id
+}
+
+#! ================ VPC ================
 
 # resource "aws_vpc" "vpc_test" {
 #   cidr_block = "172.16.0.0/16"
@@ -78,51 +145,14 @@ resource "aws_instance" "free_tier_instance" {
 #   allocation_id = aws_eip.my_eip.id
 # }
 
-resource "aws_security_group" "sec_group" {
-  name        = "Security Group"
-  description = "Allow inbound and outbound traffic"
-  vpc_id      = data.aws_vpc.vpc.id
-
-  tags = {
-    Name = "allow_ssh"
-  }
-}
-
-#? Security Group Rule for SSH and Ping
-resource "aws_security_group_rule" "ssh" {
-  type              = "ingress"
-  to_port           = 22
-  from_port         = 22
-  protocol          = "TCP"
-  cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.sec_group.id
-}
-
-resource "aws_security_group_rule" "tcp" {
-  type              = "ingress"
-  to_port           = 80
-  from_port         = 80
-  protocol          = "TCP"
-  cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.sec_group.id
-}
-
-resource "aws_security_group_rule" "outbound" {
-  type              = "egress"
-  from_port         = 0
-  to_port           = 0
-  protocol          = "-1"
-  cidr_blocks       = ["0.0.0.0/0"]
-  ipv6_cidr_blocks  = ["::/0"]
-  security_group_id = aws_security_group.sec_group.id
-}
-
 # resource "aws_key_pair" "wsl_key_pair" {
 #   key_name   = var.aws_key_pair.key_name
 #   public_key = tls_private_key.pem_key.public_key_openssh
 
 #   tags = var.aws_key_pair.tags
 # }
+
+#! ================ SSH PEM Key ================
 
 #? Create private and public key for SSH to AWS Instance
 # resource "tls_private_key" "pem_key" {

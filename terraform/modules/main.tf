@@ -9,15 +9,15 @@ module "k3s_instance_sg" {
     }
   }
 
-  k3s_ami = {
-    content = "k3s"
-    owner   = "bryson"
-    usage   = "profile"
+  docker_ami = {
+    "tag:content" = "docker"
+    "tag:owner"   = "bryson"
+    "tag:usage"   = "profile"
   }
 
   aws_wsl_key_pair = {
-    owner    = "bryson"
-    location = "home"
+    "tag:owner"    = "bryson"
+    "tag:location" = "home"
   }
 
   # aws_key_pair = {
