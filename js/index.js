@@ -81,6 +81,14 @@
         })
     })
 
+    document.getElementById("cv-download-btn").addEventListener("click", () =>{
+        alert("This feature is still under development. Please check back later 😄");
+    })
+
+    document.getElementById("send-email-btn").addEventListener("click", () =>{
+        alert("This feature is still under development. Please check back later 😄");
+    })
+
     function incrementCircle() {
         let outerCircle = document.querySelectorAll('.outer-circle');
 

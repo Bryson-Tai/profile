@@ -9,7 +9,7 @@
     height: 80%;
     border-radius: 5px;
 
-    @include devices(sml) {
+    @include devices(mdm) {
         height: 96%;
     }
 
@@ -22,7 +22,7 @@
         justify-content: center;
         flex-direction: row-reverse;
 
-        @include devices(sml) {
+        @include devices(mdm) {
             flex-direction: column;
         }
     }
@@ -44,7 +44,7 @@
         position: relative;
         transition: 0.6s all ease-in-out;
 
-        @include devices(sml) {
+        @include devices(mdm) {
             height: 16%;
             width: 100%;
             order: 3;
@@ -64,7 +64,7 @@
             align-items: center;
             justify-content: center;
 
-            @include devices(sml) {
+            @include devices(mdm) {
                 border-radius: 50px;
                 height: 70%;
             }
@@ -76,9 +76,13 @@
                 justify-content: space-around;
                 align-items: center;
 
-                @include devices(sml) {
+                @include devices(mdm) {
                     flex-direction: row;
                     justify-content: space-between;
+                    width: 80%;
+                }
+
+                @include devices(sml) {
                     width: 86%;
                 }
 
@@ -98,7 +102,7 @@
                         bottom: 0;
                         background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
 
-                        @include devices(sml) {
+                        @include devices(mdm) {
                             display: none;
                         }
                     }
@@ -124,6 +128,14 @@
                         justify-content: center;
                         align-items: center;
 
+                        @include devices(mdm) {
+                            font-size: 1.2em;
+                        }
+
+                        @include devices(sml) {
+                            font-size: 0.9em;
+                        }
+
                         &:hover {
                             color: $middle-orange;
 
@@ -145,7 +157,7 @@
         overflow-y: scroll;
         border-radius: 5px;
 
-        @include devices(sml) {
+        @include devices(mdm) {
             order: 2;
             width: 100%;
             margin-top: 4%;
@@ -189,6 +201,10 @@
                     rgba(255, 251, 249, 1) 100%
                 );
 
+                @include devices(mdm) {
+                    width: 6%;
+                }
+
                 @include devices(sml) {
                     width: 14%;
                     top: -15%;
@@ -209,6 +225,10 @@
                 margin-bottom: 5px;
                 font-size: 1.3em;
                 position: relative;
+
+                @include devices(sml) {
+                    font-size: 1.2em;
+                }
 
                 span {
                     color: $lighter-dark-orange;
@@ -236,18 +256,24 @@
                     width: 90%;
                     margin-top: 30px;
 
-                    @include devices(sml) {
-                        flex-direction: column;
+                    @include devices(mdm) {
+                        flex-direction: row;
                         text-align: left;
                         width: 100%;
                         margin-top: 20px;
+                    }
 
+                    @include devices(sml) {
+                        flex-direction: column;
+                        
                         .left-wrap {
                             width: 100%;
                         }
+
+                        .right-wrap {
+                            width: 100%;
+                        }
                     }
-
-
 
                     h2 {
                         font-size: 1em;
@@ -256,7 +282,12 @@
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
-                        @include devices(sml) {
+                        // @include devices(sml) {
+                        //     margin-bottom: 10px;
+                        //     letter-spacing: normal;
+                        // }
+
+                        @include devices(mdm) {
                             margin-bottom: 10px;
                             letter-spacing: normal;
                         }
@@ -266,7 +297,11 @@
                             font-weight: 800;
                             color: $dark-purple;
 
-                            @include devices(sml) {
+                            // @include devices(sml) {
+                            //     letter-spacing: 4px;
+                            // }
+
+                            @include devices(mdm) {
                                 letter-spacing: 4px;
                             }
                         }
@@ -356,6 +391,10 @@
                     &:nth-child(2),
                     &:nth-child(4) {
                         padding-left: 4%;
+
+                        @include devices(sml) {
+                            padding-left: 0;
+                        }
                     }
                 }
 
@@ -383,7 +422,7 @@
                     position: absolute;
                     background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
 
-                    @include devices(sml) {
+                    @include devices(mdm) {
                         display: none;
                     }
                 }
@@ -411,6 +450,7 @@
                             padding: 5% 0;
                         }
 
+
                         &::after {
                             content: "";
                             width: 90%;
@@ -435,6 +475,10 @@
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
+                        @include devices(mdm) {
+                            font-size: 1.3em;
+                        }
+
                         @include devices(sml) {
                             font-size: 1.2em;
                         }
@@ -449,7 +493,7 @@
                         flex-direction: row;
                         justify-content: space-between;
 
-                        @include devices(sml) {
+                        @include devices(mdm) {
                             width: 100%;
                         }
 
@@ -479,7 +523,7 @@
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
 
-                        @include devices(sml) {
+                        @include devices(mdm) {
                             margin: 0;
                         }
 
@@ -524,7 +568,7 @@
                     }
 
                     h3 {
-                        margin-top: 15px;
+                        margin-top: 12px;
 
                         @include devices(sml) {
                             margin-top: 3px;
@@ -556,6 +600,10 @@
 
                     h3 {
                         font-size: 1.2em;
+
+                        @include devices(mdm) {
+                            font-size: 1.1em;
+                        }
 
                         @include devices(sml) {
                             font-size: 1em;
@@ -761,6 +809,10 @@
                                 @include devices(sml) {
                                     padding-left: 0;
                                 }
+
+                                @include devices(mdm) {
+                                    padding-right: 0;
+                                }
                             }
 
                             &:nth-child(1) {
@@ -809,6 +861,11 @@
                                         font-weight: bold;
                                         margin-right: 20px;
                                         text-align: center;
+
+                                        @include devices(sml) {
+                                            font-size: 1.2em;
+                                            margin-right: 10px;
+                                        }
                                     }
 
                                     li {
@@ -816,6 +873,10 @@
                                         font-weight: 600;
                                         line-height: 1.5em;
                                         color: #303030;
+
+                                        @include devices(sml) {
+                                            font-size: 1em;
+                                        }
                                     }
                                 }
                             }
@@ -832,6 +893,10 @@
                                 width: 100%;
                                 padding: 8% 4%;
                                 position: relative;
+
+                                @include devices(mdm) {
+                                    padding: 8% 0;
+                                }
 
                                 @include devices(sml) {
                                     padding: 6% 0;
@@ -869,6 +934,10 @@
                                     width: 100%;
                                     font-size: 0.9em;
 
+                                    @include devices(sml) {
+                                        font-size: 0.8em;
+                                    }
+
                                     & > * {
                                         color: #303030;
                                     }
@@ -900,8 +969,8 @@
                                     margin-top: 10px;
                                     position: relative;
 
-                                    @include devices(sml) {
-                                        padding: 2% 0 4% 0;
+                                    @include devices(mdm) {
+                                        padding: 2% 4% 4% 0;
                                         margin-top: 5px;
                                     }
 
@@ -934,6 +1003,10 @@
                                         font-size: 1.05em;
                                         font-weight: bold;
                                         color: #303030;
+
+                                        @include devices(sml) {
+                                        font-size: 1em;
+                                    }
                                     }
 
                                     .progress_btns_wrap {
@@ -943,7 +1016,6 @@
                                         margin-top: 7px;
 
                                         i {
-                                            font-size: 1em;
                                             color: $lighter-dark-purple;
                                             text-align: center;
                                         }
@@ -996,6 +1068,10 @@
                                     font-weight: 600;
                                     color: #303030;
                                     margin: 10px 0;
+
+                                    @include devices(sml) {
+                                        font-size: 1em;
+                                    }
                                 }
 
                                 .outer-circle {
@@ -1089,13 +1165,19 @@
                 min-height: 50%;
                 padding-right: 3%;
 
-                @include devices(sml) {
+                @include devices(mdm) {
                     padding-right: 0;
                     padding-bottom: 50px;
                 }
 
                 .map {
                     margin-top: 20px;
+
+                    iframe{
+                        @include devices(sml) {
+                            height: 200px;
+                        }
+                    }
                 }
 
                 .address-contact {
@@ -1224,6 +1306,10 @@
                                 max-height: 150px;
                                 resize: none;
                                 padding: 1%;
+
+                                @include devices(sml) {
+                                    padding: 3%;
+                                }
                             }
 
                             input[type="submit"] {
@@ -1236,6 +1322,10 @@
 
                                 &:hover {
                                     background-color: $light-orange;
+                                }
+
+                                @include devices(sml) {
+                                    width: 35%;
                                 }
                             }
                         }
@@ -1253,7 +1343,7 @@
         border-radius: 5px;
         position: relative;
 
-        @include devices(sml) {
+        @include devices(mdm) {
             height: 20%;
             width: 100%;
             transform: none;
@@ -1269,7 +1359,7 @@
             border-radius: 5px;
             z-index: -100;
 
-            @include devices(sml) {
+            @include devices(mdm) {
                 display: none;
             }
         }
@@ -1282,10 +1372,9 @@
             border-radius: 5px;
             background-color: #fefefe;
 
-            @include devices(sml) {
+            @include devices(mdm) {
                 display: flex;
                 flex-wrap: wrap;
-                
             }
 
             .profile-img {
@@ -1294,12 +1383,16 @@
                 width: 100%;
                 border-radius: 5px;
 
-                @include devices(sml) {
+                @include devices(mdm) {
                     width: auto;
-                    height: 75%;
+                    height: 80%;
                     order: 1;
                     flex: 1 0 50%;
                     text-align: center;
+                }
+
+                @include devices(sml) {
+                    height: 75%;
                 }
 
                 img {
@@ -1308,7 +1401,7 @@
                     border-radius: 5px;
                     object-fit: cover;
 
-                    @include devices(sml) {
+                    @include devices(mdm) {
                         width: auto;
                         height: 100%;
                         margin: 0 auto;
@@ -1323,8 +1416,8 @@
                 flex-direction: column;
                 text-align: center;
 
-                @include devices(sml) {
-                    height: 75%;
+                @include devices(mdm) {
+                    height: 80%;
                     order: 2;
                     flex: 1 0 50%;
                     align-items: center;
@@ -1332,10 +1425,22 @@
                     padding: 3% 0%;
                 }
 
+                @include devices(sml) {
+                    height: 75%;
+                }
+
                 h3 {
                     font-size: calc(1em + 0.6vw);
                     font-weight: 600;
                     text-transform: capitalize;
+
+                    @include devices(mdm) {
+                        font-size: calc(1.5em + 0.5vw);
+                    }
+
+                    @include devices(sml) {
+                        font-size: calc(1em + 0.6vw);
+                    }
                 }
 
                 h4 {
@@ -1346,8 +1451,12 @@
                     color: $dark-orange;
                     margin-top: 15px;
 
-                    @include devices(sml) {
+                    @include devices(mdm) {
                         margin-top: 5px;
+                        font-size: calc(0.9em + 0.5vw);
+                    }
+
+                    @include devices(sml) {
                         font-size: calc(0.8em + 0.5vw);
                     }
                 }
@@ -1359,12 +1468,16 @@
                     display: flex;
                     justify-content: space-between;
 
-                    @include devices(sml) {
+                    @include devices(mdm) {
                         width: 50%;
                     }
 
                     a {
                         font-size: 1.4em;
+
+                        @include devices(mdm) {
+                            font-size: calc(1.3em + 0.5vw);
+                        }
 
                         @include devices(sml) {
                             font-size: calc(1em + 0.5vw);
@@ -1390,7 +1503,7 @@
                 text-align: center;
                 position: relative;
 
-                @include devices(sml) {
+                @include devices(mdm) {
                     height: 25%;
                     order: 3;
                     flex: 1 0 100%;
@@ -1410,7 +1523,7 @@
                     height: 100%;
                     padding: 3% 0;
 
-                    @include devices(sml) {
+                    @include devices(mdm) {
                         padding: 2%;
                     }
 
@@ -1425,6 +1538,14 @@
                         font-weight: 600;
                         cursor: pointer;
                         transition: all 0.2s ease-in-out;
+
+                        @include devices(mdm) {
+                            font-size: calc(0.9em + 0.5vw);
+                        }
+
+                        @include devices(sml) {
+                            font-size: calc(0.7em + 0.5vw);
+                        }
 
                         &:hover {
                             color: $dark-orange;
