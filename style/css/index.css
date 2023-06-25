@@ -338,7 +338,7 @@ body {
 }
 @media only screen and (max-width: 440px) {
   .content .container .section_title::before {
-    width: 14%;
+    width: 12%;
     top: -15%;
     left: -3%;
   }
@@ -1550,7 +1550,7 @@ body {
 .content .my-profile .profile-wrap .contact-wrap div {
   width: 50%;
   height: 100%;
-  padding: 4% 0;
+  padding: 3% 0;
 }
 @media only screen and (max-width: 913px) {
   .content .my-profile .profile-wrap .contact-wrap div {
