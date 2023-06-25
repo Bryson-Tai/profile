@@ -24,6 +24,7 @@
 
         @include devices(mdm) {
             flex-direction: column;
+            width: 86%;
         }
     }
 
