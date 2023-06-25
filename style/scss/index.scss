@@ -287,14 +287,10 @@
                         color: $black;
                         text-transform: uppercase;
                         letter-spacing: 1px;
-
-                        // @include devices(sml) {
-                        //     margin-bottom: 10px;
-                        //     letter-spacing: normal;
-                        // }
+                        margin-bottom: 10px;
 
                         @include devices(mdm) {
-                            margin-bottom: 10px;
+                            margin-bottom: 5px;
                             letter-spacing: normal;
                         }
 
