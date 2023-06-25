@@ -722,10 +722,20 @@ body {
   font-size: 2em;
   color: #ED7014;
 }
+@media only screen and (max-width: 440px) {
+  .content .container .resume_sect .title i {
+    font-size: 1.8em;
+  }
+}
 .content .container .resume_sect .title h2 {
   margin-left: 10px;
   font-weight: 500;
   font-size: 1.1em;
+}
+@media only screen and (max-width: 440px) {
+  .content .container .resume_sect .title h2 {
+    font-size: 1em;
+  }
 }
 .content .container .resume_sect .resume_wrap .work_education_wrap {
   display: flex;
@@ -808,6 +818,11 @@ body {
   font-weight: 800;
   margin-top: 10px;
 }
+@media only screen and (max-width: 440px) {
+  .content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h4 {
+    font-size: 1em;
+  }
+}
 .content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box h4 a i {
   transition: all 0.3s ease-in-out;
 }
@@ -824,6 +839,11 @@ body {
   font-size: 1em;
   font-weight: 500;
   line-height: 1.7em;
+}
+@media only screen and (max-width: 440px) {
+  .content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box p {
+    font-size: 0.9em;
+  }
 }
 .content .container .resume_sect .resume_wrap .work_education_wrap .resume .resume_box p span {
   color: #452c63;
@@ -1221,6 +1241,7 @@ body {
 }
 @media only screen and (max-width: 440px) {
   .content .container .contact_sect .map_wrap .address-contact div h2 {
+    font-size: 0.9em;
     letter-spacing: 0px;
   }
 }

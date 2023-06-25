@@ -656,12 +656,20 @@
                 i {
                     font-size: 2em;
                     color: $dark-orange;
+
+                    @include devices(sml) {
+                        font-size: 1.8em;
+                    }
                 }
 
                 h2 {
                     margin-left: 10px;
                     font-weight: 500;
                     font-size: 1.1em;
+
+                    @include devices(sml) {
+                        font-size: 1em;
+                    }
                 }
             }
 
@@ -750,6 +758,10 @@
                                 font-weight: 800;
                                 margin-top: 10px;
 
+                                @include devices(sml) {
+                                    font-size: 1em;
+                                }
+
                                 a {
                                     i {
                                         transition: all 0.3s ease-in-out;
@@ -773,6 +785,10 @@
                                 font-size: 1em;
                                 font-weight: 500;
                                 line-height: 1.7em;
+
+                                @include devices(sml) {
+                                    font-size: 0.9em;
+                                }
 
                                 span {
                                     color: $dark-purple;
@@ -1225,6 +1241,7 @@
                             letter-spacing: 1px;
 
                             @include devices(sml) {
+                                font-size: 0.9em;
                                 letter-spacing: 0px;
                             }
 
