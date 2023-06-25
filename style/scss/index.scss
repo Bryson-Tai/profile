@@ -244,6 +244,11 @@
                 p {
                     margin-top: 20px;
                     line-height: 1.7em;
+
+                    @include devices(sml) {
+                        font-size: 0.9em;
+                    }
+
                     span {
                         font-weight: 500;
                         font-size: 1.2em;
@@ -1181,6 +1186,14 @@
                         text-transform: uppercase;
                         letter-spacing: 1px;
                         text-align: center;
+
+                        @include devices(mdm) {
+                            font-size: 3em;
+                        }
+
+                        @include devices(sml) {
+                            font-size: 1.5em;
+                        }
                     }
                 }
                 
@@ -1536,7 +1549,7 @@
                 position: relative;
 
                 @include devices(mdm) {
-                    height: 25%;
+                    height: 20%;
                     order: 3;
                     flex: 1 0 100%;
                 }
@@ -1553,10 +1566,10 @@
                 div {
                     width: 50%;
                     height: 100%;
-                    padding: 3% 0;
+                    padding: 4% 0;
 
                     @include devices(mdm) {
-                        padding: 2%;
+                        padding: 2% 0 0 0;
                     }
 
                     i {
