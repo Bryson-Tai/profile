@@ -76,7 +76,6 @@
                         sect.setAttribute("style", "display:none;")
                     }, 400)
                 }
-                
             })
         })
     })
