@@ -1,0 +1,26 @@
+@mixin devices ($breakpoint) {
+  
+  @if $breakpoint == mdm {    
+    @media only screen and (max-width: 1260px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == sml {
+    @media only screen and (max-width: 912px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sml400 {
+    @media only screen and (max-width: 420px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == w1470 {
+    @media only screen and (max-width: 1470px) {
+      @content;
+    }
+  }
+}

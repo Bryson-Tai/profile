@@ -21,6 +21,11 @@ body {
 .margin-top-3-6 {
   margin-top: 5em;
 }
+@media only screen and (max-width: 912px) {
+  .margin-top-3-6 {
+    margin-top: 3em;
+  }
+}
 
 .auto-align-center {
   margin: 0 auto;

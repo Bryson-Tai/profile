@@ -1,3 +1,5 @@
+@import "./mediaQueries";
+
 // Primary color
 $dark-orange: #ED7014;
 $lighter-dark-orange: #f27a25;
@@ -35,6 +37,10 @@ background: linear-gradient(162deg, rgba(69,44,99,1) 0%, rgba(163,119,217,1) 50%
 
 .margin-top-3-6{
     margin-top: 5em;
+
+    @include devices(sml) {
+        margin-top: 3em;
+    }
 }
 
 .auto-align-center{

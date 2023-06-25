@@ -1,4 +1,4 @@
-@import "./common", "./animation";
+@import "./common", "./animation", "./mediaQueries";
 
 .content {
     position: absolute;
@@ -9,6 +9,10 @@
     height: 80%;
     border-radius: 5px;
 
+    @include devices(sml) {
+        height: 96%;
+    }
+
     .content-relative {
         position: relative;
         width: 82%;
@@ -17,6 +21,10 @@
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
+
+        @include devices(sml) {
+            flex-direction: column;
+        }
     }
 
     .fadeToLeft{
@@ -36,14 +44,30 @@
         position: relative;
         transition: 0.6s all ease-in-out;
 
+        @include devices(sml) {
+            height: 16%;
+            width: 100%;
+            order: 3;
+            padding: 0;
+            border-radius: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         nav {
+            width: 100%;
             height: 100%;
             background: $white;
-            width: 100%;
             border-radius: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include devices(sml) {
+                border-radius: 50px;
+                height: 70%;
+            }
 
             ul {
                 height: 100%;
@@ -51,6 +75,12 @@
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+
+                @include devices(sml) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 86%;
+                }
 
                 li {
                     display: flex;
@@ -67,6 +97,10 @@
                         position: absolute;
                         bottom: 0;
                         background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+
+                        @include devices(sml) {
+                            display: none;
+                        }
                     }
 
                     &:nth-child(4) {
@@ -81,7 +115,6 @@
                     }
 
                     a {
-                        // opacity: 0;
                         font-weight: 500;
                         font-size: 0.9em;
                         color: $black;
@@ -111,6 +144,13 @@
         padding: 2% 3% 1% 4%;
         overflow-y: scroll;
         border-radius: 5px;
+
+        @include devices(sml) {
+            order: 2;
+            width: 100%;
+            margin-top: 4%;
+            padding: 7%;
+        }
 
         &::-webkit-scrollbar {
             width: 6px;
@@ -148,6 +188,12 @@
                     rgba(255, 179, 123, 1) 29%,
                     rgba(255, 251, 249, 1) 100%
                 );
+
+                @include devices(sml) {
+                    width: 14%;
+                    top: -15%;
+                    left: -3%;
+                }
             }
 
             &::after {
@@ -190,6 +236,19 @@
                     width: 90%;
                     margin-top: 30px;
 
+                    @include devices(sml) {
+                        flex-direction: column;
+                        text-align: left;
+                        width: 100%;
+                        margin-top: 20px;
+
+                        .left-wrap {
+                            width: 100%;
+                        }
+                    }
+
+
+
                     h2 {
                         font-size: 1em;
                         font-weight: 700;
@@ -197,10 +256,19 @@
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
+                        @include devices(sml) {
+                            margin-bottom: 10px;
+                            letter-spacing: normal;
+                        }
+
                         .dot-wrap {
                             letter-spacing: 5px;
                             font-weight: 800;
                             color: $dark-purple;
+
+                            @include devices(sml) {
+                                letter-spacing: 4px;
+                            }
                         }
 
                         .data-wrap {
@@ -225,12 +293,21 @@
                     left: 50%;
                     position: absolute;
                     background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+
+                    @include devices(sml) {
+                        display: none;
+                    }
                 }
 
                 .service {
                     width: 50%;
                     padding: 5% 3% 4% 0;
                     position: relative;
+
+                    @include devices(sml) {
+                        width: 100%;
+                        padding: 6% 0;
+                    }
 
                     &::after {
                         content: "";
@@ -294,6 +371,10 @@
                 width: 100%;
                 position: relative;
 
+                @include devices(sml) {
+                    flex-direction: column;
+                }
+
                 &::after {
                     content: "";
                     width: 1px;
@@ -301,6 +382,10 @@
                     left: 50%;
                     position: absolute;
                     background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+
+                    @include devices(sml) {
+                        display: none;
+                    }
                 }
 
                 .pricing {
@@ -309,9 +394,22 @@
                     height: 100%;
                     padding: 0% 2%;
 
+                    @include devices(sml) {
+                        width: 100%;
+                        padding: 0;
+
+                        &:nth-child(2) {
+                            margin-top: 40px;
+                        }
+                    }
+
                     .pricing-content {
                         position: relative;
                         padding: 10% 2%;
+
+                        @include devices(sml) {
+                            padding: 5% 0;
+                        }
 
                         &::after {
                             content: "";
@@ -336,6 +434,10 @@
                         font-weight: 700;
                         text-transform: uppercase;
                         letter-spacing: 1px;
+
+                        @include devices(sml) {
+                            font-size: 1.2em;
+                        }
                     }
 
                     ul {
@@ -346,6 +448,10 @@
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
+
+                        @include devices(sml) {
+                            width: 100%;
+                        }
 
                         li {
                             font-size: 1em;
@@ -373,6 +479,10 @@
                         cursor: pointer;
                         transition: all 0.3s ease-in-out;
 
+                        @include devices(sml) {
+                            margin: 0;
+                        }
+
                         &:hover {
                             background: $lighter-dark-purple;
                         }
@@ -395,6 +505,10 @@
                     padding: 5% 3%;
                     position: relative;
 
+                    @include devices(sml) {
+                        width: 50%;
+                    }
+
                     &::before {
                         position: absolute;
                         content: "";
@@ -402,11 +516,20 @@
                         height: 100%;
                         top: 0;
                         right: 0;
-                        background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
+                        background: radial-gradient(ellipse at top, #dddddd 0%, rgba(255, 255, 255, 0) 70%); 
+
+                        @include devices(sml) {
+                            display: none;
+                        }
                     }
 
                     h3 {
                         margin-top: 15px;
+
+                        @include devices(sml) {
+                            margin-top: 3px;
+                            font-weight: 600;
+                        }
                     }
 
                     i {
@@ -425,10 +548,19 @@
                         font-weight: 700;
                         text-transform: uppercase;
                         letter-spacing: 1px;
+
+                        @include devices(sml) {
+                            font-size: 0.9em;
+                        }
                     }
 
                     h3 {
                         font-size: 1.2em;
+
+                        @include devices(sml) {
+                            font-size: 1em;
+                        }
+
                         span {
                             color: $dark-purple;
                         }
@@ -446,6 +578,10 @@
                 text-transform: uppercase;
                 position: relative;
                 padding: 20px 20px 20px 0;
+
+                @include devices(sml) {
+                    padding: 20px 0 10px 0;
+                }
 
                 &::after {
                     content: "";
@@ -476,6 +612,10 @@
                     justify-content: space-between;
                     position: relative;
 
+                    @include devices(sml) {
+                        flex-direction: column;
+                    }
+
                     .grey {
                         color: #999;
                         border-color: #999 !important;
@@ -493,6 +633,10 @@
                             darken(#dddddd, 10%) 0%,
                             rgba(255, 255, 255, 0) 70%
                         );
+
+                        @include devices(sml) {
+                            display: none;
+                        }
                     }
 
                     .resume {
@@ -502,13 +646,25 @@
                         justify-content: space-between;
                         flex-direction: column;
 
+                        @include devices(sml) {
+                            width: 100%;
+                        }
+
                         &:nth-child(2) {
                             padding-left: 5%;
+
+                            @include devices(sml) {
+                                padding-left: 0;
+                            }
                         }
 
                         .resume_box {
                             padding: 7% 5% 7% 0;
                             position: relative;
+
+                            @include devices(sml) {
+                                padding: 5% 0;
+                            }
 
                             &::after {
                                 content: "";
@@ -593,8 +749,18 @@
                             padding: 3% 3% 5% 0;
                             position: relative;
 
+                            @include devices(sml) {
+                                min-width: 100%;
+                                max-width: 100%;
+                                padding: 3% 0 5% 0;
+                            }
+
                             &:nth-child(2) {
                                 padding-left: 5%;
+
+                                @include devices(sml) {
+                                    padding-left: 0;
+                                }
                             }
 
                             &:nth-child(1) {
@@ -610,6 +776,10 @@
                                         darken(#dddddd, 10%) 0%,
                                         rgba(255, 255, 255, 0) 70%
                                     );
+
+                                    @include devices(sml) {
+                                        display: none;
+                                    }
                                 }
                             }
                         }
@@ -621,6 +791,10 @@
                                 flex-direction: column;
                                 margin-top: 20px;
                                 width: 100%;
+
+                                @include devices(sml) {
+                                    margin-top: 5px;
+                                }
 
                                 .li_i_wrap {
                                     width: 100%;
@@ -650,10 +824,18 @@
                         .coding {
                             padding-right: 5%;
 
+                            @include devices(sml) {
+                                padding-right: 0;
+                            }
+
                             .progress_box {
                                 width: 100%;
                                 padding: 8% 4%;
                                 position: relative;
+
+                                @include devices(sml) {
+                                    padding: 6% 0;
+                                }
 
                                 &::after {
                                     content: "";
@@ -668,6 +850,10 @@
                                         rgba(255, 255, 255, 0) 70%
                                     );
                                     margin-left: 10px;
+
+                                    @include devices(sml) {
+                                        display: none;
+                                    }
                                 }
 
                                 &:last-child {
@@ -713,6 +899,11 @@
                                     padding: 2% 7% 6% 4%;
                                     margin-top: 10px;
                                     position: relative;
+
+                                    @include devices(sml) {
+                                        padding: 2% 0 4% 0;
+                                        margin-top: 5px;
+                                    }
 
                                     .grey-btn {
                                         color: #9a9a9a93 !important;
@@ -770,6 +961,10 @@
                                 height: 75%;
                                 width: 100%;
 
+                                @include devices(sml) {
+                                    height: 100%;
+                                }
+
                                 .upper-wrap,
                                 .bottom-wrap {
                                     width: 100%;
@@ -779,6 +974,10 @@
                                     justify-content: space-between;
                                     align-items: center;
                                     margin-top: 30px;
+
+                                    @include devices(sml) {
+                                        margin-top: 15px;
+                                    }
                                 }
                             }
 
@@ -794,7 +993,7 @@
 
                                 h2 {
                                     font-size: 1.1em;
-                                    font-weight: 400;
+                                    font-weight: 600;
                                     color: #303030;
                                     margin: 10px 0;
                                 }
@@ -890,6 +1089,11 @@
                 min-height: 50%;
                 padding-right: 3%;
 
+                @include devices(sml) {
+                    padding-right: 0;
+                    padding-bottom: 50px;
+                }
+
                 .map {
                     margin-top: 20px;
                 }
@@ -909,6 +1113,12 @@
                         flex-direction: row;
                         align-items: center;
 
+                        @include devices(sml) {
+                            width: 100%;
+                            margin-top: 10px;
+                        }
+
+
                         h2 {
                             font-size: 1em;
                             font-weight: 700;
@@ -917,10 +1127,18 @@
                             text-transform: uppercase;
                             letter-spacing: 1px;
 
+                            @include devices(sml) {
+                                letter-spacing: 0px;
+                            }
+
                             .dot-wrap {
                                 letter-spacing: 5px;
                                 font-weight: 800;
                                 color: $dark-purple;
+
+                                @include devices(sml) {
+                                    letter-spacing: 3px;
+                                }
                             }
 
                             .data-wrap {
@@ -1035,16 +1253,25 @@
         border-radius: 5px;
         position: relative;
 
+        @include devices(sml) {
+            height: 20%;
+            width: 100%;
+            transform: none;
+        }
+
         .first-layer-bg {
             position: absolute;
             width: 100%;
             height: 100%;
             left: -3%;
             top: -2%;
-            // transform: rotate(-2deg);
             background: #4a2e6c77;
             border-radius: 5px;
             z-index: -100;
+
+            @include devices(sml) {
+                display: none;
+            }
         }
 
         .profile-wrap {
@@ -1055,19 +1282,37 @@
             border-radius: 5px;
             background-color: #fefefe;
 
+            @include devices(sml) {
+                display: flex;
+                flex-wrap: wrap;
+                
+            }
+
             .profile-img {
                 position: relative;
                 height: 65%;
                 width: 100%;
-                // padding-top: ;
                 border-radius: 5px;
 
+                @include devices(sml) {
+                    width: auto;
+                    height: 75%;
+                    order: 1;
+                    flex: 1 0 50%;
+                    text-align: center;
+                }
 
                 img {
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     border-radius: 5px;
                     object-fit: cover;
+
+                    @include devices(sml) {
+                        width: auto;
+                        height: 100%;
+                        margin: 0 auto;
+                    }
                 }
             }
 
@@ -1078,8 +1323,17 @@
                 flex-direction: column;
                 text-align: center;
 
+                @include devices(sml) {
+                    height: 75%;
+                    order: 2;
+                    flex: 1 0 50%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3% 0%;
+                }
+
                 h3 {
-                    font-size: 2em;
+                    font-size: calc(1em + 0.6vw);
                     font-weight: 600;
                     text-transform: capitalize;
                 }
@@ -1091,6 +1345,11 @@
                     text-transform: uppercase;
                     color: $dark-orange;
                     margin-top: 15px;
+
+                    @include devices(sml) {
+                        margin-top: 5px;
+                        font-size: calc(0.8em + 0.5vw);
+                    }
                 }
 
                 .social-media {
@@ -1100,8 +1359,17 @@
                     display: flex;
                     justify-content: space-between;
 
+                    @include devices(sml) {
+                        width: 50%;
+                    }
+
                     a {
-                        font-size: 1.1em;
+                        font-size: 1.4em;
+
+                        @include devices(sml) {
+                            font-size: calc(1em + 0.5vw);
+                        }
+
                         i {
                             transition: 0.3s all ease-in-out;
                         }
@@ -1122,6 +1390,12 @@
                 text-align: center;
                 position: relative;
 
+                @include devices(sml) {
+                    height: 25%;
+                    order: 3;
+                    flex: 1 0 100%;
+                }
+
                 &::before {
                     position: absolute;
                     content: "";
@@ -1135,6 +1409,10 @@
                     width: 50%;
                     height: 100%;
                     padding: 3% 0;
+
+                    @include devices(sml) {
+                        padding: 2%;
+                    }
 
                     i {
                         transition: 0.2s all ease-in-out;
