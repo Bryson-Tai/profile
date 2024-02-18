@@ -2,7 +2,7 @@
     // Type Writer for Job Position
     document.addEventListener('DOMContentLoaded', () => {
         new Typed('#job-position', {
-            strings: ['Junior Site Reliability Engineer', 'Junior DevOps Engineer', 'Web Developer'],
+            strings: ['Junior DevOps Engineer', 'Web Developer'],
             typeSpeed: 80,
             backSpeed: 50,
             startDelay: 200,
