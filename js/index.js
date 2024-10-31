@@ -14,6 +14,11 @@
         //Calculate Age Dynamically
         document.getElementById('age_count').textContent = new Date().getFullYear() - 1996;
         document.getElementById('coding_year').textContent = new Date().getFullYear() - 2019;
+        addProjects();
+        addTechnology();
+        addKnowledge();
+        addSoftSkills();
+        addLanguages();
     });
 
     // Resume Progress Bar Animation
@@ -58,6 +63,10 @@
 
                     for (let i = 0; i < progressBar.length; i++) {
                         progressBar[i].removeAttribute("style");
+                        
+                    }
+                    for (let i = 0; i < outerCircle.length; i++) {
+                       
                         outerCircle[i].removeAttribute("style");
                     }
                 }
