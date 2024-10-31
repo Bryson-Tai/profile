@@ -63,10 +63,8 @@
 
                     for (let i = 0; i < progressBar.length; i++) {
                         progressBar[i].removeAttribute("style");
-                        
                     }
                     for (let i = 0; i < outerCircle.length; i++) {
-                       
                         outerCircle[i].removeAttribute("style");
                     }
                 }
