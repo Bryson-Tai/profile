@@ -1,5 +1,5 @@
 async function addProjects() {
-    const jsonData = await fetch("../data/projects.json")
+    const jsonData = await fetch("./data/projects.json")
         .then(resp => resp.json());
     
     const section = document.getElementById("project_sect")
@@ -37,7 +37,7 @@ async function addProjects() {
 }
 
 async function addTechnology() {
-    const jsonData = await fetch("../data/abilities.json")
+    const jsonData = await fetch("./data/abilities.json")
         .then(resp => resp.json());
     
     const section = document.getElementById("technology")
@@ -62,7 +62,7 @@ async function addTechnology() {
 }
 
 async function addKnowledge() {
-    const jsonData = await fetch("../data/abilities.json")
+    const jsonData = await fetch("./data/abilities.json")
         .then(resp => resp.json());
     
     const section = document.querySelector("#knowledge > ul")
@@ -81,7 +81,7 @@ async function addKnowledge() {
 }
 
 async function addSoftSkills() {
-    const jsonData = await fetch("../data/abilities.json")
+    const jsonData = await fetch("./data/abilities.json")
         .then(resp => resp.json());
     
     const section = document.querySelector("#soft_skills > ul")
@@ -111,7 +111,7 @@ async function addSoftSkills() {
 }
 
 async function addLanguages() {
-    const jsonData = await fetch("../data/abilities.json")
+    const jsonData = await fetch("./data/abilities.json")
         .then(resp => resp.json());
     
     const languageArr = jsonData["languages"];
