@@ -1,12 +1,12 @@
 @import "./mediaQueries";
 
-// Primary color
+// Primary Color
 $dark-orange: #ED7014;
 $lighter-dark-orange: #f27a25;
 $middle-orange: #FA8128;
 $light-orange: #f88d41;
 $light-middle-orange:#fda172;
-$lightest-orange: #f2b799;
+$lightest-orange: #f5ae8a;
 $white: #fff;
 $black: #1f1f1f;
 
@@ -14,6 +14,9 @@ $black: #1f1f1f;
 $dark-purple: #452c63;
 $lighter-dark-purple: #5e3f7b;
 $middle-purple: #a377d9;
+
+// Project Tags Color
+$azure: #1283f5;
 
 *{
     margin: 0;

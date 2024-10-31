@@ -1,0 +1,81 @@
+{
+  "technology": [
+    {
+      "name": "Infra as Code",
+      "percent": "70"
+    },
+    {
+      "name": "CI/CD Pipeline",
+      "percent": "80"
+    },
+    {
+      "name": "Monitoring & Logging",
+      "percent": "60"
+    },
+    {
+      "name": "Container Ochestration",
+      "percent": "70"
+    },
+    {
+      "name": "Go Lang & Python",
+      "percent": "50"
+    }
+  ],
+  "knowledge": [
+    {
+      "name": "DevOps Engineering"
+    },
+    {
+      "name": "DevSecOps"
+    },
+    {
+      "name": "Cloud Providers"
+    },
+    {
+      "name": "GitOps"
+    },
+    {
+      "name": "Strong Troubleshooting Skills"
+    }
+  ],
+  "soft_skills": [
+    {
+      "name": "Teamwork",
+      "circleOf10": "7"
+    },
+    {
+      "name": "Communication",
+      "circleOf10": "8"
+    },
+    {
+      "name": "Problem Solving",
+      "circleOf10": "8"
+    },
+    {
+      "name": "Time Management",
+      "circleOf10": "7"
+    },
+    {
+      "name": "Leadership",
+      "circleOf10": "9"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "percent": "70"
+    },
+    {
+      "name": "Chinese",
+      "percent": "90"
+    },
+    {
+      "name": "B. Malaysia",
+      "percent": "50"
+    },
+    {
+      "name": "Cantonese",
+      "percent": "70"
+    }
+  ]
+}

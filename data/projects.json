@@ -1,0 +1,29 @@
+[
+  {
+    "link": "https://github.com/Bryson-Tai/Azure_Networking",
+    "name": "Azure Networking",
+    "description": "Learned some of Azure Networking related services by using IaC tools such as Terraform or OpenTofu.",
+    "tags": [
+      {
+        "name": "Terraform",
+        "css_class": "iac"
+      },
+      {
+        "name": "OpenTofu",
+        "css_class": "iac"
+      },
+      {
+        "name": "Azure",
+        "css_class": "azure"
+      },
+      {
+        "name": "Networking",
+        "css_class": ""
+      },
+      {
+        "name": "Bash",
+        "css_class": ""
+      }
+    ]
+  }
+]
