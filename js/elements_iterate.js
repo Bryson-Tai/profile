@@ -1,5 +1,5 @@
 async function addProjects() {
-    const jsonData = await fetch("../data/projects.json")
+    const jsonData = await fetch("./profile/data/projects.json")
         .then(resp => resp.json());
     
     const section = document.getElementById("project_sect")
