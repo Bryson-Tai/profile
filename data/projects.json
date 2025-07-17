@@ -2,15 +2,15 @@
   {
     "link": "https://github.com/Bryson-Tai/Azure_Networking",
     "name": "Azure Networking",
-    "description": "Learned some of Azure Networking related services by using IaC tools such as Terraform or OpenTofu.",
+    "description": "Learned some of Azure Networking related services by using terraform tools such as Terraform or OpenTofu.",
     "tags": [
       {
         "name": "Terraform",
-        "css_class": "iac"
+        "css_class": "terraform"
       },
       {
         "name": "OpenTofu",
-        "css_class": "iac"
+        "css_class": "terraform"
       },
       {
         "name": "Azure",
@@ -23,6 +23,95 @@
       {
         "name": "Bash",
         "css_class": ""
+      }
+    ]
+  },
+  {
+    "link": "https://dev.azure.com/bryson9149/bryson_ado_demo/_git/golang_project_deployment",
+    "name": "Azure DevOps Golang Project",
+    "description": "Full CI/CD for deploying a Go App using Azure DevOps pipelines.",
+    "tags": [
+      {
+        "name": "Terraform",
+        "css_class": "terraform"
+      },
+      {
+        "name": "OpenTofu",
+        "css_class": "opentofu"
+      },
+      {
+        "name": "Azure",
+        "css_class": "azure"
+      },
+      {
+        "name": "Golang",
+        "css_class": ""
+      },
+      {
+        "name": "Azure DevOps",
+        "css_class": "azure"
+      },
+      {
+        "name": "Kubernetes",
+        "css_class": "k8s"
+      }
+    ]
+  },
+  {
+    "link": "https://gitlab.com/Bryson-Tai/golang_project_deployment",
+    "name": "GitLab Golang Project - Deployment",
+    "description": "Go App deployment to Azure Kubernetes Service and Azure Container Registry for docker image management through GitLab CI.",
+    "tags": [
+      {
+        "name": "Azure",
+        "css_class": "azure"
+      },
+      {
+        "name": "Golang",
+        "css_class": ""
+      },
+      {
+        "name": "GitLab",
+        "css_class": "gitlab-ci"
+      },
+      {
+        "name": "Kubernetes",
+        "css_class": "k8s"
+      },
+      {
+        "name": "Security",
+        "css_class": "security"
+      }
+    ]
+  },
+  {
+    "link": "https://gitlab.com/Bryson-Tai/golang_project_infra",
+    "name": "GitLab Golang Project - Infrastructure",
+    "description": "Provision Azure Kubernetes Service and Azure Container Registry through GitLab CI using OpenTofu.",
+    "tags": [
+      {
+        "name": "Terraform",
+        "css_class": "terraform"
+      },
+      {
+        "name": "OpenTofu",
+        "css_class": "opentofu"
+      },
+      {
+        "name": "Azure",
+        "css_class": "azure"
+      },
+      {
+        "name": "GitLab",
+        "css_class": "gitlab-ci"
+      },
+      {
+        "name": "Kubernetes",
+        "css_class": "k8s"
+      },
+      {
+        "name": "Security",
+        "css_class": "security"
       }
     ]
   }
