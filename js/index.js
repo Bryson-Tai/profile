@@ -74,7 +74,9 @@
                     sect.classList.remove("fadeToLeft")
                     sect.classList.add("fadeToRight")
                     setTimeout(() => {
-                        sect.setAttribute("style", "display:block;")
+                        // If section is project, display as flex, else display as block
+                        displayValue = id == "project" ? "flex" : "block";
+                        sect.setAttribute("style", `display:${displayValue};`)
                     }, 400)
                 }else{
                     sect.classList.remove("fadeToRight")

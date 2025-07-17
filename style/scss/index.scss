@@ -1143,8 +1143,7 @@
         }
 
         .project_sect {
-            // display: none;
-            display: flex !important;
+            display: none;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
