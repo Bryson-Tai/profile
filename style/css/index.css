@@ -1153,7 +1153,7 @@ body {
   margin: 10px 0;
 }
 .content .container .project_sect {
-  display: flex !important;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
