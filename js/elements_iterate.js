@@ -17,7 +17,7 @@ async function addProjects() {
                 <a href="${e.link}" target="_blank">
                     <div class="projects">
                         <div class="project-links">
-                            <span>${e.name}</span><span>> > ></span>
+                            <span>${e.name}</span>
                         </div>
                         <div class="tags">
                             ${tagsHTML}

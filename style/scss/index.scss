@@ -1143,7 +1143,11 @@
         }
 
         .project_sect {
-            display: none;
+            // display: none;
+            display: flex !important;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
             .construction_wrap {
                 width: 100%;
@@ -1197,22 +1201,25 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                height: fit-content;
+                width: 48%;
+                margin: 0 10px 10px 0;
             }
 
             .projects {
                 display: flex;
                 flex-direction: column;
-                width: 47%;
+                width: 100%;
                 height: fit-content;
-                padding: 8px 15px 15px 15px;
+                padding: 0px 15px 15px 15px;
                 border: 1px solid black;
-                border-radius: 5px;
+                border-radius: 10px;
                 margin-top: 10px;
-                background-color: $light-middle-orange;
+                background-color: #f7f6f6;
                 cursor: pointer;
 
                 &:hover{
-                    background-color: $lightest-orange;
+                    background-color: #e8e7e7;
                     transition: all 0.5s;
                     
 
@@ -1264,9 +1271,25 @@
                         border: 1px solid $azure;
                         background-color: $azure;
                     }
-                    .iac{
-                        border: 1px solid $lighter-dark-purple;
-                        background-color: $lighter-dark-purple;
+                    .terraform{
+                        border: 1px solid $terraform;
+                        background-color: $terraform;
+                    }
+                    .opentofu{
+                        border: 1px solid $opentofu;
+                        background-color: $opentofu;
+                    }
+                    .k8s{
+                        border: 1px solid $k8s;
+                        background-color: $k8s;
+                    }
+                    .gitlab-ci{
+                        border: 1px solid $gitlab-ci;
+                        background-color: $gitlab-ci;
+                    }
+                    .security{
+                        border: 1px solid $security;
+                        background-color: $security;
                     }
                 }
             }

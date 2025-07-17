@@ -1153,7 +1153,10 @@ body {
   margin: 10px 0;
 }
 .content .container .project_sect {
-  display: none;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .content .container .project_sect .construction_wrap {
   width: 100%;
@@ -1205,21 +1208,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  height: fit-content;
+  width: 48%;
+  margin: 0 10px 10px 0;
 }
 .content .container .project_sect .projects {
   display: flex;
   flex-direction: column;
-  width: 47%;
+  width: 100%;
   height: fit-content;
-  padding: 8px 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10px;
-  background-color: #fda172;
+  background-color: #f7f6f6;
   cursor: pointer;
 }
 .content .container .project_sect .projects:hover {
-  background-color: #f5ae8a;
+  background-color: #e8e7e7;
   transition: all 0.5s;
 }
 .content .container .project_sect .projects:hover > .project-links a {
@@ -1263,9 +1269,25 @@ body {
   border: 1px solid #1283f5;
   background-color: #1283f5;
 }
-.content .container .project_sect .projects .tags .iac {
-  border: 1px solid #5e3f7b;
-  background-color: #5e3f7b;
+.content .container .project_sect .projects .tags .terraform {
+  border: 1px solid #7b42f5;
+  background-color: #7b42f5;
+}
+.content .container .project_sect .projects .tags .opentofu {
+  border: 1px solid #ddae38;
+  background-color: #ddae38;
+}
+.content .container .project_sect .projects .tags .k8s {
+  border: 1px solid #326ce5;
+  background-color: #326ce5;
+}
+.content .container .project_sect .projects .tags .gitlab-ci {
+  border: 1px solid #ea722d;
+  background-color: #ea722d;
+}
+.content .container .project_sect .projects .tags .security {
+  border: 1px solid #7ecd1d;
+  background-color: #7ecd1d;
 }
 .content .container .contact_sect {
   width: 100%;
