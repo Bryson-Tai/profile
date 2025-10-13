@@ -58,7 +58,7 @@
 - [LinkedIn](https://www.linkedin.com/in/bryson-tai-531453235/)
 - [GitHub](https://github.com/Bryson-Tai)
 - [Email](mailto:brysontai1314@gmail.com)
-- [Personal Website](https://bryson-tai.github.io/profile/)
+- [Personal Website](https://bryson-tai.github.io/Bryson-Tai/)
 
 ---
 
